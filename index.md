@@ -1,37 +1,134 @@
-## Welcome to GitHub Pages
+## Project Report
 
-You can use the [editor on GitHub](https://github.com/DJ9123/p2DomingoCookJoeyGloria/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+### Example 1
+![Example image 1 for car design](/assets/car1.png)
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+#### Pros:
+- Has buttons for quick access
+  - Temperature control
+  - Air control
+  - Sound control
+- Notification is displayed on screen when a problem occurs
 
-### Markdown
+#### Cons:
+- MPH is not always displayed on main digital display
+  - The screen also displays several other menus and hides MPH 
+  - MPH should always be visible digitally 
+- Center screen is small
+  - Not good for displaying music album art
+  - Items within a list sometimes need scrolling (recent contacts)
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
 
-```markdown
-Syntax highlighted code block
+### Example 2
+![Example image 2 for car design](/assets/car2.png)
 
-# Header 1
-## Header 2
-### Header 3
+#### Pros:
+- Large main screen to show more information
+- Large middle screen with multitasking
+  - GPS
+  - Music
+  - Phone calls
+- Main controls are centered under screen for easier access
 
-- Bulleted
-- List
+#### Cons:
+- Main screen does not display MPH and MPG
 
-1. Numbered
-2. List
 
-**Bold** and _Italic_ and `Code` text
+### Example 3
+![Example image 3 for car design](/assets/car3.png)
 
-[Link](url) and ![Image](src)
-```
+#### Pros:
+- Displays MPH digitally (also includes classic style speedometer)
+- Both screens are wide enough to show important information to the user
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+#### Cons:
+- Bottom screen for temperature, air speed, etc. is very small
+  - This could easily be display with a knob like the previous designs
+- The amount of information displayed can be distracting
+  - A button for toggling only important information would be helpful
 
-### Jekyll Themes
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/DJ9123/p2DomingoCookJoeyGloria/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+### Example 4
+![Example image 4 for car design](/assets/car4.png)
 
-### Support or Contact
+#### Pros:
+-
+#### Cons:
+-
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+
+### Example 5
+![Example image 5 for car design](/assets/car5.png)
+
+#### Pros:
+-
+#### Cons:
+-
+
+
+### Most common features
+#### Main Dashboard
+- Digital MPH displayed on screen
+- Fuel remaining
+- Speedometer and tachometer are always visible
+- Portion of dashboard is saved to display warnings or problems with the vehicle
+- Tire pressure view
+
+#### Center Dashboard
+- Display
+  - Time
+  - Currently playing music
+  - User Settings
+
+
+### Most common controls
+#### Main Dashboard
+- Control for switching between display modes
+  - MPG
+  - Tire pressure
+  - Service interval tracker
+- Fuel efficiency switch (normal, eco, sport)
+
+#### Center Dashboard
+- Temperature controls
+- Air controls with indicator for speed
+- Music controls
+
+
+### Most common mistakes
+#### Main Dashboard
+- Tachometer is not useful for a lot of users
+  - Fuel consumption can be monitored with RPM, can be displayed digitally
+- Digital MPH sometimes is not visible to the user when trying to view other information
+
+#### Center Dashboard
+- If screen is too big, physical buttons are often removed
+  - The user will have to look towards the screen to find the digital button they want to use
+- If screen is too small, important info cannot be displayed to user easily
+- Knobs are easier to use than buttons, switch, sliders, etc. for volume, temperature, and air flow
+
+
+### How are we going to improve it
+<!-- Add text here -->
+- Add toggle for tachometer
+<!-- Add sketch here -->
+
+### Design for dashboard
+<!-- Add sketch here -->
+#### Need the following on main dashboard:
+- Speedometer (maybe tachometer)
+- Digital MPH
+- Screen for other important info
+ - Notifications for car problems
+ - MPG
+- Car problem icons
+- Fuel Remaining
+
+#### Need the following on center dashboard:
+ - Currently playing (+ artwork?)
+ - Music controls
+ - Temperature controls
+ - Air controls
+
+### Video presentation
+<!-- Add link here -->
