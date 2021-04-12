@@ -52,9 +52,17 @@
 ![Example image 4 for car design](/assets/car4.png)
 
 #### Pros:
--
+- Main dashboard clearly represents information
+- Shows MPH and other important information on screen
+- Center dashboard has physical buttons for shortcuts
+- Simple layout for temperature controls
+
 #### Cons:
--
+- Center Dashboard uses apps for navigation
+  - Too many menus
+  - Takes too much time to use while driving
+  - Distracting
+- Hard to press digital buttons while driving
 
 
 ### Example 5
@@ -62,6 +70,7 @@
 
 #### Pros:
 -
+
 #### Cons:
 -
 
@@ -97,7 +106,7 @@
 
 ### Most common mistakes
 #### Main Dashboard
-- Tachometer is not useful for a lot of users
+- Tachometer is not useful for a lot of automatic car users
   - Fuel consumption can be monitored with RPM, can be displayed digitally
 - Digital MPH sometimes is not visible to the user when trying to view other information
 
@@ -109,14 +118,23 @@
 
 
 ### How are we going to improve it
-<!-- Add text here -->
-- Add toggle for tachometer
-<!-- Add sketch here -->
+#### Main Dashboard
+- Centering and giving a portion of the screen dedicated to alert icons
+- Always showing MPH of vehicle
+- Display fuel efficiency and fuel capacity in a horizontal bar
+- Display text alerts for alert icon meaning
+
+#### Center Dashboard
+- Use physical buttons for screen shortcuts
+- Use knobs for volume/temperature
+- Display more information about alerts
+
 
 ### Design for dashboard
 <!-- Add sketch here -->
+
 #### Need the following on main dashboard:
-- Speedometer (maybe tachometer)
+- Speedometer and tachometer
 - Digital MPH
 - Screen for other important info
  - Notifications for car problems
@@ -125,6 +143,7 @@
 - Fuel Remaining
 
 #### Need the following on center dashboard:
+ - Shortcuts for applications
  - Currently playing (+ artwork?)
  - Music controls
  - Temperature controls
