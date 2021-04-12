@@ -1,0 +1,32 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Scenes/Test_Static_Body.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scenes/Test_Area2D.tscn" type="PackedScene" id=2]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+visible = false
+margin_left = 1.1225
+margin_top = 2.24493
+margin_right = 550.122
+margin_bottom = 330.245
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+margin_left = 548.0
+margin_top = 3.0
+margin_right = 1024.0
+margin_bottom = 606.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="StaticBody2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( 45.0776, 98.7259 )
+scale = Vector2( 2.24743, -18.6696 )
+
+[node name="Node2D" parent="." instance=ExtResource( 2 )]
+position = Vector2( 75.8443, 264.251 )
