@@ -1,0 +1,619 @@
+[gd_scene load_steps=20 format=2]
+
+[ext_resource path="res://Scripts/Center Dashboard/dash-button.gd" type="Script" id=1]
+[ext_resource path="res://Sprites/screen-border.png" type="Texture" id=2]
+[ext_resource path="res://Scripts/Center Dashboard/center_dashboard.gd" type="Script" id=3]
+[ext_resource path="res://Sprites/dash-side-button.png" type="Texture" id=4]
+[ext_resource path="res://Sprites/dash-side-button_pressed.png" type="Texture" id=5]
+[ext_resource path="res://Fonts/mini-wakuwaku.otf" type="DynamicFontData" id=6]
+[ext_resource path="res://Sprites/dash-half1-side-button.png" type="Texture" id=7]
+[ext_resource path="res://Sprites/dash-half2-side-button_pressed.png" type="Texture" id=8]
+[ext_resource path="res://Sprites/dash-half1-side-button_pressed.png" type="Texture" id=9]
+[ext_resource path="res://Sprites/dash-half2-side-button.png" type="Texture" id=10]
+[ext_resource path="res://Sprites/knob.png" type="Texture" id=11]
+[ext_resource path="res://Scripts/Center Dashboard/knob.gd" type="Script" id=12]
+[ext_resource path="res://Sprites/home_pressed.png" type="Texture" id=13]
+[ext_resource path="res://Sprites/home.png" type="Texture" id=14]
+[ext_resource path="res://Sprites/warning_pressed.png" type="Texture" id=15]
+[ext_resource path="res://Sprites/warning.png" type="Texture" id=16]
+
+[sub_resource type="DynamicFont" id=1]
+size = 26
+font_data = ExtResource( 6 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 21
+font_data = ExtResource( 6 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 49.9624, 50.9133 )
+
+[node name="Center" type="Node2D"]
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_vertical_guides_": [ 262.82 ]
+}
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+margin_left = 95.0
+margin_right = 428.0
+margin_bottom = 278.0
+texture = ExtResource( 2 )
+region_rect = Rect2( 0, 0, 800, 600 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Radio" type="TextureButton" parent="."]
+margin_left = 0.00543499
+margin_top = 0.020175
+margin_right = 95.0054
+margin_bottom = 63.02
+rect_pivot_offset = Vector2( -126.59, -80.8903 )
+texture_normal = ExtResource( 4 )
+texture_pressed = ExtResource( 5 )
+expand = true
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CenterContainer" type="CenterContainer" parent="Radio"]
+margin_left = 3.0
+margin_top = 3.0
+margin_right = 92.0
+margin_bottom = 59.0
+rect_clip_content = true
+mouse_filter = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Radio/CenterContainer"]
+margin_left = 6.0
+margin_top = 14.0
+margin_right = 82.0
+margin_bottom = 41.0
+custom_fonts/font = SubResource( 1 )
+text = "Radio"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Music" type="TextureButton" parent="."]
+margin_left = 0.00543499
+margin_top = 63.02
+margin_right = 95.0054
+margin_bottom = 126.02
+rect_pivot_offset = Vector2( -126.59, -80.8903 )
+texture_normal = ExtResource( 4 )
+texture_pressed = ExtResource( 5 )
+expand = true
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CenterContainer" type="CenterContainer" parent="Music"]
+margin_left = 3.0
+margin_top = 3.0
+margin_right = 92.0
+margin_bottom = 59.0
+rect_clip_content = true
+mouse_filter = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Music/CenterContainer"]
+margin_left = 7.0
+margin_top = 14.0
+margin_right = 81.0
+margin_bottom = 41.0
+custom_fonts/font = SubResource( 1 )
+text = "Music"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Previous" type="TextureButton" parent="."]
+margin_left = 0.00543499
+margin_top = 126.02
+margin_right = 48.0054
+margin_bottom = 189.02
+rect_pivot_offset = Vector2( -126.59, -80.8903 )
+texture_normal = ExtResource( 7 )
+texture_pressed = ExtResource( 9 )
+expand = true
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CenterContainer" type="CenterContainer" parent="Previous"]
+margin_left = 3.0
+margin_top = 3.0
+margin_right = 48.0
+margin_bottom = 59.0
+rect_clip_content = true
+mouse_filter = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Previous/CenterContainer"]
+margin_left = 7.0
+margin_top = 14.0
+margin_right = 37.0
+margin_bottom = 41.0
+custom_fonts/font = SubResource( 1 )
+text = "<-"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Next" type="TextureButton" parent="."]
+margin_left = 48.0054
+margin_top = 126.02
+margin_right = 95.0054
+margin_bottom = 189.02
+rect_pivot_offset = Vector2( -126.59, -80.8903 )
+texture_normal = ExtResource( 10 )
+texture_pressed = ExtResource( 8 )
+expand = true
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CenterContainer" type="CenterContainer" parent="Next"]
+margin_left = 3.0
+margin_top = 3.0
+margin_right = 48.0
+margin_bottom = 59.0
+rect_clip_content = true
+mouse_filter = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Next/CenterContainer"]
+margin_left = 7.0
+margin_top = 14.0
+margin_right = 37.0
+margin_bottom = 41.0
+custom_fonts/font = SubResource( 1 )
+text = "->"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Phone" type="TextureButton" parent="."]
+margin_left = 776.091
+margin_top = -0.166797
+margin_right = 871.091
+margin_bottom = 62.833
+rect_scale = Vector2( -1, 1 )
+rect_pivot_offset = Vector2( -126.59, -80.8903 )
+texture_normal = ExtResource( 4 )
+texture_pressed = ExtResource( 5 )
+expand = true
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CenterContainer" type="CenterContainer" parent="Phone"]
+margin_left = 91.7215
+margin_top = 3.75086
+margin_right = 180.721
+margin_bottom = 59.7509
+rect_scale = Vector2( -1, 1 )
+rect_clip_content = true
+mouse_filter = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Phone/CenterContainer"]
+margin_left = 3.0
+margin_top = 14.0
+margin_right = 84.0
+margin_bottom = 41.0
+custom_fonts/font = SubResource( 1 )
+text = "Phone"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Map" type="TextureButton" parent="."]
+margin_left = 776.091
+margin_top = 62.8332
+margin_right = 871.091
+margin_bottom = 125.833
+rect_scale = Vector2( -1, 1 )
+rect_pivot_offset = Vector2( -126.59, -80.8903 )
+texture_normal = ExtResource( 4 )
+texture_pressed = ExtResource( 5 )
+expand = true
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CenterContainer" type="CenterContainer" parent="Map"]
+margin_left = 91.7215
+margin_top = 3.75086
+margin_right = 180.721
+margin_bottom = 59.7509
+rect_scale = Vector2( -1, 1 )
+rect_clip_content = true
+mouse_filter = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Map/CenterContainer"]
+margin_left = 17.0
+margin_top = 14.0
+margin_right = 71.0
+margin_bottom = 41.0
+custom_fonts/font = SubResource( 1 )
+text = "Map"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Settings" type="TextureButton" parent="."]
+margin_left = 776.091
+margin_top = 125.833
+margin_right = 871.091
+margin_bottom = 188.833
+rect_scale = Vector2( -1, 1 )
+rect_pivot_offset = Vector2( -126.59, -80.8903 )
+texture_normal = ExtResource( 4 )
+texture_pressed = ExtResource( 5 )
+expand = true
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CenterContainer" type="CenterContainer" parent="Settings"]
+margin_left = 92.0
+margin_top = 4.0
+margin_right = 180.0
+margin_bottom = 60.0
+rect_scale = Vector2( -1, 1 )
+rect_clip_content = true
+mouse_filter = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Settings/CenterContainer"]
+margin_top = 17.0
+margin_right = 88.0
+margin_bottom = 39.0
+custom_fonts/font = SubResource( 2 )
+text = "Settings"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Home" type="TextureButton" parent="."]
+margin_left = 214.645
+margin_top = 293.893
+margin_right = 309.645
+margin_bottom = 356.893
+rect_pivot_offset = Vector2( -126.59, -80.8903 )
+texture_normal = ExtResource( 14 )
+texture_pressed = ExtResource( 13 )
+expand = true
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CenterContainer" type="CenterContainer" parent="Home"]
+margin_left = 3.0
+margin_top = 3.0
+margin_right = 92.0
+margin_bottom = 59.0
+rect_clip_content = true
+mouse_filter = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Home/CenterContainer"]
+visible = false
+margin_left = 9.0
+margin_top = 14.0
+margin_right = 80.0
+margin_bottom = 41.0
+custom_fonts/font = SubResource( 1 )
+text = "Home"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Volume_Control" type="Area2D" parent="."]
+position = Vector2( 49, 236 )
+rotation = -2.35619
+scale = Vector2( 0.865, 0.865 )
+script = ExtResource( 12 )
+
+[node name="Label" type="Label" parent="Volume_Control"]
+visible = false
+margin_right = 101.0
+margin_bottom = 14.0
+text = "Volume_Control"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="Volume_Control"]
+texture = ExtResource( 11 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Volume_Control"]
+visible = false
+rotation = 2.35619
+shape = SubResource( 3 )
+
+[node name="CenterContainer" type="CenterContainer" parent="Volume_Control"]
+visible = false
+margin_left = 27.0265
+margin_top = -0.838074
+margin_right = 67.0265
+margin_bottom = 39.1619
+rect_rotation = 135.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Volume_Control/CenterContainer"]
+margin_left = 15.0
+margin_top = 12.0
+margin_right = 23.0
+margin_bottom = 26.0
+text = "0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Radio_Control" type="Area2D" parent="."]
+position = Vector2( 474, 236 )
+rotation = -2.35619
+scale = Vector2( 0.865, 0.865 )
+script = ExtResource( 12 )
+
+[node name="Label" type="Label" parent="Radio_Control"]
+visible = false
+margin_left = 347.421
+margin_top = -347.424
+margin_right = 448.421
+margin_bottom = -333.424
+text = "Radio_Control"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="Radio_Control"]
+texture = ExtResource( 11 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Radio_Control"]
+visible = false
+rotation = 2.35619
+shape = SubResource( 3 )
+
+[node name="CenterContainer" type="CenterContainer" parent="Radio_Control"]
+visible = false
+margin_left = 27.0265
+margin_top = -0.838074
+margin_right = 67.0265
+margin_bottom = 39.1619
+rect_rotation = 135.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Radio_Control/CenterContainer"]
+margin_left = 15.0
+margin_top = 12.0
+margin_right = 23.0
+margin_bottom = 26.0
+text = "0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Temperature" type="Area2D" parent="."]
+position = Vector2( 81, 409.511 )
+rotation = -2.35619
+scale = Vector2( 1.125, 1.125 )
+script = ExtResource( 12 )
+
+[node name="Label" type="Label" parent="Temperature"]
+visible = false
+margin_left = 129.172
+margin_top = 88.9446
+margin_right = 230.172
+margin_bottom = 102.945
+text = "Temperature"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="Temperature"]
+texture = ExtResource( 11 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Temperature"]
+visible = false
+rotation = 2.35619
+shape = SubResource( 3 )
+
+[node name="CenterContainer" type="CenterContainer" parent="Temperature"]
+visible = false
+margin_left = 27.0265
+margin_top = -0.838074
+margin_right = 67.0265
+margin_bottom = 39.1619
+rect_rotation = 135.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Temperature/CenterContainer"]
+margin_left = 15.0
+margin_top = 12.0
+margin_right = 23.0
+margin_bottom = 26.0
+text = "0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Air_Flow" type="Area2D" parent="."]
+position = Vector2( 262.435, 409.511 )
+rotation = -2.35619
+scale = Vector2( 0.625, 0.625 )
+script = ExtResource( 12 )
+
+[node name="Label" type="Label" parent="Air_Flow"]
+visible = false
+margin_left = 437.779
+margin_top = -45.1708
+margin_right = 538.779
+margin_bottom = -31.1708
+text = "Air_Flow"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Air_Flow"]
+visible = false
+rotation = 2.35619
+shape = SubResource( 3 )
+
+[node name="Sprite" type="Sprite" parent="Air_Flow"]
+texture = ExtResource( 11 )
+
+[node name="CenterContainer" type="CenterContainer" parent="Air_Flow"]
+visible = false
+margin_left = 27.0265
+margin_top = -0.838074
+margin_right = 67.0265
+margin_bottom = 39.1619
+rect_rotation = 135.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Air_Flow/CenterContainer"]
+margin_left = 15.0
+margin_top = 12.0
+margin_right = 23.0
+margin_bottom = 26.0
+text = "0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Air_Speed" type="Area2D" parent="."]
+position = Vector2( 446.892, 409.511 )
+rotation = -2.35619
+scale = Vector2( 1.125, 1.125 )
+script = ExtResource( 12 )
+
+[node name="Label" type="Label" parent="Air_Speed"]
+visible = false
+margin_left = 359.149
+margin_top = -141.034
+margin_right = 460.149
+margin_bottom = -127.034
+text = "Air_Speed"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="Air_Speed"]
+texture = ExtResource( 11 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Air_Speed"]
+visible = false
+rotation = 2.35619
+shape = SubResource( 3 )
+
+[node name="CenterContainer" type="CenterContainer" parent="Air_Speed"]
+visible = false
+margin_left = 27.0265
+margin_top = -0.838074
+margin_right = 67.0265
+margin_bottom = 39.1619
+rect_rotation = 135.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Air_Speed/CenterContainer"]
+margin_left = 15.0
+margin_top = 12.0
+margin_right = 23.0
+margin_bottom = 26.0
+text = "0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Warning" type="TextureButton" parent="."]
+margin_left = 204.645
+margin_top = 460.893
+margin_right = 299.645
+margin_bottom = 523.893
+rect_scale = Vector2( 1.196, 0.732 )
+texture_normal = ExtResource( 16 )
+texture_pressed = ExtResource( 15 )
+expand = true
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CenterContainer" type="CenterContainer" parent="Warning"]
+margin_left = 3.0
+margin_top = 3.0
+margin_right = 92.0
+margin_bottom = 59.0
+rect_clip_content = true
+mouse_filter = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Warning/CenterContainer"]
+visible = false
+margin_left = -11.0
+margin_top = 14.0
+margin_right = 100.0
+margin_bottom = 41.0
+custom_fonts/font = SubResource( 1 )
+text = "Warning"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="Radio" to="Radio" method="_on_Button_pressed"]
+[connection signal="pressed" from="Music" to="Music" method="_on_Button_pressed"]
+[connection signal="pressed" from="Previous" to="Previous" method="_on_Button_pressed"]
+[connection signal="pressed" from="Next" to="Next" method="_on_Button_pressed"]
+[connection signal="pressed" from="Phone" to="Phone" method="_on_Button_pressed"]
+[connection signal="pressed" from="Map" to="Map" method="_on_Button_pressed"]
+[connection signal="pressed" from="Settings" to="Settings" method="_on_Button_pressed"]
+[connection signal="pressed" from="Home" to="Home" method="_on_Button_pressed"]
+[connection signal="input_event" from="Volume_Control" to="Volume_Control" method="_on_LeftKnob_input_event"]
+[connection signal="input_event" from="Radio_Control" to="Radio_Control" method="_on_LeftKnob_input_event"]
+[connection signal="input_event" from="Temperature" to="Temperature" method="_on_LeftKnob_input_event"]
+[connection signal="input_event" from="Air_Flow" to="Air_Flow" method="_on_LeftKnob_input_event"]
+[connection signal="input_event" from="Air_Speed" to="Air_Speed" method="_on_LeftKnob_input_event"]
+[connection signal="activated" from="Warning" to="." method="_on_Warning_activated"]
+[connection signal="pressed" from="Warning" to="Warning" method="_on_Button_pressed"]

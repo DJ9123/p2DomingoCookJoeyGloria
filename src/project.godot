@@ -16,7 +16,14 @@ _global_script_class_icons={
 [application]
 
 config/name="HCI Project 2"
+run/main_scene="res://Scenes/dashboard.tscn"
 config/icon="res://icon.png"
+
+[display]
+
+window/size/width=1600
+window/stretch/mode="viewport"
+window/stretch/aspect="keep"
 
 [input]
 
