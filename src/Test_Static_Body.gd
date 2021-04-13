@@ -1,4 +1,4 @@
-extends Area2D
+extends StaticBody2D
 
 
 # Declare member variables here. Examples:
@@ -8,13 +8,11 @@ extends Area2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass
+	pass # Replace with function body.
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
-
-func _on_Area2D_mouse_entered():
-	self.rotate(.01)
-	print('aaaaaaaaaaaaaa')
+func _process(delta):
+	# self.rotate(.002)
+	if(Input.is_mouse_button_pressed(BUTTON_LEFT)):
+		self.rotate(.002)

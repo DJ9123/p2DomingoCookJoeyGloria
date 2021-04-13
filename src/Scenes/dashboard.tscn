@@ -1,15 +1,11 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Scripts/dash-button.gd" type="Script" id=1]
 [ext_resource path="res://Sprites/screen-border.png" type="Texture" id=2]
 [ext_resource path="res://Scripts/dashboard.gd" type="Script" id=3]
 [ext_resource path="res://Sprites/dash-side-button.png" type="Texture" id=4]
 [ext_resource path="res://Sprites/dash-side-button_pressed.png" type="Texture" id=5]
-[ext_resource path="res://Fonts/mini-wakuwaku.otf" type="DynamicFontData" id=6]
-
-[sub_resource type="DynamicFont" id=1]
-size = 26
-font_data = ExtResource( 6 )
+[ext_resource path="res://Fonts/wakuwaku.tres" type="DynamicFont" id=6]
 
 [node name="Node2D" type="Node2D"]
 
@@ -62,7 +58,7 @@ margin_left = 6.0
 margin_top = 14.0
 margin_right = 82.0
 margin_bottom = 41.0
-custom_fonts/font = SubResource( 1 )
+custom_fonts/font = ExtResource( 6 )
 text = "Radio"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -98,7 +94,7 @@ margin_left = 7.0
 margin_top = 14.0
 margin_right = 81.0
 margin_bottom = 41.0
-custom_fonts/font = SubResource( 1 )
+custom_fonts/font = ExtResource( 6 )
 text = "Music"
 __meta__ = {
 "_edit_use_anchors_": false
