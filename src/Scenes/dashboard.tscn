@@ -1,0 +1,107 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Scripts/dash-button.gd" type="Script" id=1]
+[ext_resource path="res://Sprites/screen-border.png" type="Texture" id=2]
+[ext_resource path="res://Scripts/dashboard.gd" type="Script" id=3]
+[ext_resource path="res://Sprites/dash-side-button.png" type="Texture" id=4]
+[ext_resource path="res://Sprites/dash-side-button_pressed.png" type="Texture" id=5]
+[ext_resource path="res://Fonts/mini-wakuwaku.otf" type="DynamicFontData" id=6]
+
+[sub_resource type="DynamicFont" id=1]
+size = 26
+font_data = ExtResource( 6 )
+
+[node name="Node2D" type="Node2D"]
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+margin_left = 95.1234
+margin_top = 0.0580702
+margin_right = 428.123
+margin_bottom = 247.058
+texture = ExtResource( 2 )
+region_rect = Rect2( 0, 0, 800, 600 )
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Radio" type="TextureButton" parent="."]
+margin_left = 0.00543499
+margin_top = 0.020175
+margin_right = 95.0054
+margin_bottom = 63.02
+rect_pivot_offset = Vector2( -126.59, -80.8903 )
+texture_normal = ExtResource( 4 )
+texture_pressed = ExtResource( 5 )
+expand = true
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CenterContainer" type="CenterContainer" parent="Radio"]
+margin_left = 3.0
+margin_top = 3.0
+margin_right = 92.0
+margin_bottom = 59.0
+rect_clip_content = true
+mouse_filter = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Radio/CenterContainer"]
+margin_left = 6.0
+margin_top = 14.0
+margin_right = 82.0
+margin_bottom = 41.0
+custom_fonts/font = SubResource( 1 )
+text = "Radio"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Music" type="TextureButton" parent="."]
+margin_left = 0.00543499
+margin_top = 63.02
+margin_right = 95.0054
+margin_bottom = 126.02
+rect_pivot_offset = Vector2( -126.59, -80.8903 )
+texture_normal = ExtResource( 4 )
+texture_pressed = ExtResource( 5 )
+expand = true
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CenterContainer" type="CenterContainer" parent="Music"]
+margin_left = 3.0
+margin_top = 3.0
+margin_right = 92.0
+margin_bottom = 59.0
+rect_clip_content = true
+mouse_filter = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Music/CenterContainer"]
+margin_left = 7.0
+margin_top = 14.0
+margin_right = 81.0
+margin_bottom = 41.0
+custom_fonts/font = SubResource( 1 )
+text = "Music"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="Radio" to="Radio" method="_on_Button_pressed"]
+[connection signal="pressed" from="Music" to="Music" method="_on_Button_pressed"]

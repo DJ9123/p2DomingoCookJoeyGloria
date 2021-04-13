@@ -1,25 +1,28 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Sprites/dash-side-button.png" type="Texture" id=1]
 [ext_resource path="res://Sprites/dash-side-button_pressed.png" type="Texture" id=2]
 [ext_resource path="res://Fonts/mini-wakuwaku.otf" type="DynamicFontData" id=3]
+[ext_resource path="res://Scripts/dash-button.gd" type="Script" id=4]
 
 [sub_resource type="DynamicFont" id=1]
-size = 54
+size = 26
 font_data = ExtResource( 3 )
 
 [node name="Node2D" type="Node2D"]
 
-[node name="TextureButton" type="TextureButton" parent="."]
-margin_right = 40.0
-margin_bottom = 40.0
+[node name="Radio" type="TextureButton" parent="."]
+margin_right = 300.0
+margin_bottom = 200.0
+rect_pivot_offset = Vector2( -126.59, -80.8903 )
 texture_normal = ExtResource( 1 )
 texture_pressed = ExtResource( 2 )
+script = ExtResource( 4 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="CenterContainer" type="CenterContainer" parent="TextureButton"]
+[node name="CenterContainer" type="CenterContainer" parent="Radio"]
 margin_right = 300.0
 margin_bottom = 199.0
 rect_clip_content = true
@@ -28,13 +31,48 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Label" type="Label" parent="TextureButton/CenterContainer"]
-margin_left = 51.0
-margin_top = 72.0
-margin_right = 248.0
-margin_bottom = 127.0
+[node name="Label" type="Label" parent="Radio/CenterContainer"]
+margin_left = 112.0
+margin_top = 86.0
+margin_right = 188.0
+margin_bottom = 113.0
 custom_fonts/font = SubResource( 1 )
-text = "testing"
+text = "Radio"
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="Music" type="TextureButton" parent="."]
+margin_left = -1.7818
+margin_top = 201.343
+margin_right = 298.218
+margin_bottom = 401.343
+rect_pivot_offset = Vector2( -126.59, -80.8903 )
+texture_normal = ExtResource( 1 )
+texture_pressed = ExtResource( 2 )
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CenterContainer" type="CenterContainer" parent="Music"]
+margin_right = 300.0
+margin_bottom = 199.0
+rect_clip_content = true
+mouse_filter = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Music/CenterContainer"]
+margin_left = 113.0
+margin_top = 86.0
+margin_right = 187.0
+margin_bottom = 113.0
+custom_fonts/font = SubResource( 1 )
+text = "Music"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="Radio" to="Radio" method="_on_Button_pressed"]
+[connection signal="pressed" from="Music" to="Music" method="_on_Button_pressed"]
