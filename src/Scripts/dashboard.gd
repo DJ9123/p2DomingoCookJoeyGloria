@@ -9,6 +9,7 @@ extends Node2D
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	$Center.connect("emergency", self, "_on_emergency_pressed")
+	$Main/Control/Accelerate.connect("speed", self, "_a")
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -17,3 +18,6 @@ func _ready():
 
 func _on_emergency_pressed(button):
 	print("Emergency: ", button)
+	
+func _a():
+	print("too fast")

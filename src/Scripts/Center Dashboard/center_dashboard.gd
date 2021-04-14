@@ -28,6 +28,7 @@ signal emergency
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	get_node(@"../Main/Control/Accelerate").connect("speed", self, "_a")
 	for button in buttons.keys():
 		buttons[button] = get_tree().get_root().find_node(button,true,false)
 		buttons[button].connect("activated",self,"_on_dash_click")
@@ -49,3 +50,6 @@ func _on_knob_rotation(knob, rot):
 
 func _on_Warning_activated(button):
 	emit_signal("emergency", button)
+	
+func _a():
+	print('too fast! from the center screen')
