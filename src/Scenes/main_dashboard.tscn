@@ -52,7 +52,7 @@ centered = false
 offset = Vector2( -194, -7.843 )
 
 [node name="placeholdertemp" type="Sprite" parent="placeholderrpm"]
-position = Vector2( 0, 167.371 )
+position = Vector2( -6.27637, 167.371 )
 scale = Vector2( 0.194975, 0.194975 )
 texture = ExtResource( 1 )
 
@@ -97,12 +97,12 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -502.178
-margin_top = -610.852
-margin_right = -226.178
-margin_bottom = -583.852
+margin_left = -78.0
+margin_top = -633.0
+margin_right = -19.0
+margin_bottom = -606.0
 custom_fonts/font = ExtResource( 4 )
-text = "10000 degrees K"
+text = "40F"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -128,10 +128,10 @@ anchor_left = 0.497087
 anchor_top = 0.5
 anchor_right = 0.497087
 anchor_bottom = 0.5
-margin_left = -500.491
-margin_top = -50.0
-margin_right = -325.491
-margin_bottom = -23.0
+margin_left = -497.491
+margin_top = -633.184
+margin_right = -322.491
+margin_bottom = -606.184
 custom_fonts/font = ExtResource( 4 )
 text = "Driver mode"
 __meta__ = {
@@ -142,9 +142,11 @@ __meta__ = {
 position = Vector2( -106.272, -295.074 )
 
 [node name="TextureProgress" type="TextureProgress" parent="Middle-Screen/MPH"]
-margin_left = 137.328
-margin_right = 337.328
-margin_bottom = 40.0
+margin_left = -87.9489
+margin_top = 567.461
+margin_right = 112.051
+margin_bottom = 607.461
+rect_scale = Vector2( 2, 1 )
 value = 100.0
 texture_progress = ExtResource( 8 )
 __meta__ = {
@@ -155,9 +157,11 @@ __meta__ = {
 position = Vector2( -106.272, 272.387 )
 
 [node name="TextureProgress" type="TextureProgress" parent="Middle-Screen/MPG"]
-margin_left = 137.328
-margin_right = 337.328
-margin_bottom = 40.0
+margin_left = -87.9489
+margin_top = -54.6667
+margin_right = 112.051
+margin_bottom = -14.6667
+rect_scale = Vector2( 2, 1 )
 value = 100.0
 texture_progress = ExtResource( 8 )
 __meta__ = {
