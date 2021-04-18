@@ -7,8 +7,22 @@
 [node name="Dashboard" type="Node2D"]
 script = ExtResource( 3 )
 
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_right = 2447.0
+margin_bottom = 1415.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+color = Color( 0.0705882, 0.0745098, 0.105882, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="Main" parent="." instance=ExtResource( 2 )]
 position = Vector2( 5.30023, 2.56497 )
 
 [node name="Center" parent="." instance=ExtResource( 1 )]
-position = Vector2( 1045.26, 23.5116 )
+position = Vector2( 915.812, -1.44836 )
+scale = Vector2( 1.5, 1.5 )

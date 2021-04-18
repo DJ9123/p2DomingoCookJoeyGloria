@@ -19,7 +19,7 @@ var buttons = {
 var knobs = {
 	"Volume_Control": null,
 	"Radio_Control": null,
-	"Temperature": null,
+	"Air_Temp": null,
 	"Air_Flow": null,
 	"Air_Speed": null,
 }
@@ -45,7 +45,8 @@ func _on_dash_click(button):
 	print(button, button.label_text)
 
 func _on_knob_rotation(knob, rot):
-	print(knob.label_text, rot)
+#	print(knob.label_text, rot)
+	pass
 
 
 func _on_Warning_activated(button):

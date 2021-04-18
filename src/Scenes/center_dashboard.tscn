@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=2]
+[gd_scene load_steps=24 format=2]
 
 [ext_resource path="res://Scripts/Center Dashboard/dash-button.gd" type="Script" id=1]
 [ext_resource path="res://Sprites/screen-border.png" type="Texture" id=2]
@@ -16,6 +16,9 @@
 [ext_resource path="res://Sprites/home.png" type="Texture" id=14]
 [ext_resource path="res://Sprites/warning_pressed.png" type="Texture" id=15]
 [ext_resource path="res://Sprites/warning.png" type="Texture" id=16]
+[ext_resource path="res://Sprites/center-background.png" type="Texture" id=17]
+[ext_resource path="res://Scripts/Center Dashboard/Time.gd" type="Script" id=18]
+[ext_resource path="res://Scripts/Center Dashboard/Radio_Menu.gd" type="Script" id=19]
 
 [sub_resource type="DynamicFont" id=1]
 size = 26
@@ -28,27 +31,25 @@ font_data = ExtResource( 6 )
 [sub_resource type="RectangleShape2D" id=3]
 extents = Vector2( 49.9624, 50.9133 )
 
-[node name="Center" type="Node2D"]
-script = ExtResource( 3 )
-__meta__ = {
-"_edit_vertical_guides_": [ 262.82 ]
-}
+[sub_resource type="DynamicFont" id=4]
+size = 45
+font_data = ExtResource( 6 )
 
-[node name="NinePatchRect" type="NinePatchRect" parent="."]
-margin_left = 95.0
-margin_right = 428.0
-margin_bottom = 278.0
-texture = ExtResource( 2 )
-region_rect = Rect2( 0, 0, 800, 600 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
+[node name="Center" type="Node2D"]
+position = Vector2( 0, -1 )
+script = ExtResource( 3 )
+
+[node name="Background" type="Sprite" parent="."]
+position = Vector2( 334.905, 342.698 )
+scale = Vector2( 0.558141, 0.48813 )
+texture = ExtResource( 17 )
 
 [node name="Radio" type="TextureButton" parent="."]
-margin_left = 0.00543499
-margin_top = 0.020175
-margin_right = 95.0054
-margin_bottom = 63.02
+margin_left = 72.0054
+margin_top = 54.0202
+margin_right = 167.005
+margin_bottom = 117.02
+rect_scale = Vector2( 0.75, 0.75 )
 rect_pivot_offset = Vector2( -126.59, -80.8903 )
 texture_normal = ExtResource( 4 )
 texture_pressed = ExtResource( 5 )
@@ -81,10 +82,11 @@ __meta__ = {
 }
 
 [node name="Music" type="TextureButton" parent="."]
-margin_left = 0.00543499
-margin_top = 63.02
-margin_right = 95.0054
-margin_bottom = 126.02
+margin_left = 72.0054
+margin_top = 101.02
+margin_right = 167.005
+margin_bottom = 164.02
+rect_scale = Vector2( 0.75, 0.75 )
 rect_pivot_offset = Vector2( -126.59, -80.8903 )
 texture_normal = ExtResource( 4 )
 texture_pressed = ExtResource( 5 )
@@ -117,10 +119,11 @@ __meta__ = {
 }
 
 [node name="Previous" type="TextureButton" parent="."]
-margin_left = 0.00543499
-margin_top = 126.02
-margin_right = 48.0054
-margin_bottom = 189.02
+margin_left = 72.0054
+margin_top = 148.02
+margin_right = 120.005
+margin_bottom = 211.02
+rect_scale = Vector2( 0.75, 0.75 )
 rect_pivot_offset = Vector2( -126.59, -80.8903 )
 texture_normal = ExtResource( 7 )
 texture_pressed = ExtResource( 9 )
@@ -153,10 +156,11 @@ __meta__ = {
 }
 
 [node name="Next" type="TextureButton" parent="."]
-margin_left = 48.0054
-margin_top = 126.02
-margin_right = 95.0054
-margin_bottom = 189.02
+margin_left = 108.005
+margin_top = 148.02
+margin_right = 155.005
+margin_bottom = 211.02
+rect_scale = Vector2( 0.75, 0.75 )
 rect_pivot_offset = Vector2( -126.59, -80.8903 )
 texture_normal = ExtResource( 10 )
 texture_pressed = ExtResource( 8 )
@@ -189,11 +193,11 @@ __meta__ = {
 }
 
 [node name="Phone" type="TextureButton" parent="."]
-margin_left = 776.091
-margin_top = -0.166797
-margin_right = 871.091
-margin_bottom = 62.833
-rect_scale = Vector2( -1, 1 )
+margin_left = 848.091
+margin_top = 53.8332
+margin_right = 943.091
+margin_bottom = 116.833
+rect_scale = Vector2( -0.75, 0.75 )
 rect_pivot_offset = Vector2( -126.59, -80.8903 )
 texture_normal = ExtResource( 4 )
 texture_pressed = ExtResource( 5 )
@@ -227,11 +231,11 @@ __meta__ = {
 }
 
 [node name="Map" type="TextureButton" parent="."]
-margin_left = 776.091
-margin_top = 62.8332
-margin_right = 871.091
-margin_bottom = 125.833
-rect_scale = Vector2( -1, 1 )
+margin_left = 848.091
+margin_top = 100.833
+margin_right = 943.091
+margin_bottom = 163.833
+rect_scale = Vector2( -0.75, 0.75 )
 rect_pivot_offset = Vector2( -126.59, -80.8903 )
 texture_normal = ExtResource( 4 )
 texture_pressed = ExtResource( 5 )
@@ -265,11 +269,11 @@ __meta__ = {
 }
 
 [node name="Settings" type="TextureButton" parent="."]
-margin_left = 776.091
-margin_top = 125.833
-margin_right = 871.091
-margin_bottom = 188.833
-rect_scale = Vector2( -1, 1 )
+margin_left = 848.091
+margin_top = 147.833
+margin_right = 943.091
+margin_bottom = 210.833
+rect_scale = Vector2( -0.75, 0.75 )
 rect_pivot_offset = Vector2( -126.59, -80.8903 )
 texture_normal = ExtResource( 4 )
 texture_pressed = ExtResource( 5 )
@@ -302,10 +306,10 @@ __meta__ = {
 }
 
 [node name="Home" type="TextureButton" parent="."]
-margin_left = 214.645
-margin_top = 293.893
-margin_right = 309.645
-margin_bottom = 356.893
+margin_left = 285.645
+margin_top = 399.893
+margin_right = 380.645
+margin_bottom = 462.893
 rect_pivot_offset = Vector2( -126.59, -80.8903 )
 texture_normal = ExtResource( 14 )
 texture_pressed = ExtResource( 13 )
@@ -339,9 +343,9 @@ __meta__ = {
 }
 
 [node name="Volume_Control" type="Area2D" parent="."]
-position = Vector2( 49, 236 )
+position = Vector2( 76.3579, 257.401 )
 rotation = -2.35619
-scale = Vector2( 0.865, 0.865 )
+scale = Vector2( 0.65, 0.65 )
 script = ExtResource( 12 )
 
 [node name="Label" type="Label" parent="Volume_Control"]
@@ -383,10 +387,13 @@ __meta__ = {
 }
 
 [node name="Radio_Control" type="Area2D" parent="."]
-position = Vector2( 474, 236 )
+position = Vector2( 592.358, 257.401 )
 rotation = -2.35619
-scale = Vector2( 0.865, 0.865 )
+scale = Vector2( 0.65, 0.65 )
 script = ExtResource( 12 )
+min_rot = -3600
+max_rot = 3600
+sensitivity = 1.0
 
 [node name="Label" type="Label" parent="Radio_Control"]
 visible = false
@@ -428,32 +435,32 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Temperature" type="Area2D" parent="."]
-position = Vector2( 81, 409.511 )
+[node name="Air_Temp" type="Area2D" parent="."]
+position = Vector2( 114.892, 506.511 )
 rotation = -2.35619
 scale = Vector2( 1.125, 1.125 )
 script = ExtResource( 12 )
 
-[node name="Label" type="Label" parent="Temperature"]
+[node name="Label" type="Label" parent="Air_Temp"]
 visible = false
-margin_left = 129.172
-margin_top = 88.9446
-margin_right = 230.172
-margin_bottom = 102.945
-text = "Temperature"
+margin_left = 359.149
+margin_top = -141.034
+margin_right = 460.149
+margin_bottom = -127.034
+text = "Air_Speed"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Sprite" type="Sprite" parent="Temperature"]
+[node name="Sprite" type="Sprite" parent="Air_Temp"]
 texture = ExtResource( 11 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Temperature"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Air_Temp"]
 visible = false
 rotation = 2.35619
 shape = SubResource( 3 )
 
-[node name="CenterContainer" type="CenterContainer" parent="Temperature"]
+[node name="CenterContainer" type="CenterContainer" parent="Air_Temp"]
 visible = false
 margin_left = 27.0265
 margin_top = -0.838074
@@ -464,7 +471,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Label" type="Label" parent="Temperature/CenterContainer"]
+[node name="Label" type="Label" parent="Air_Temp/CenterContainer"]
 margin_left = 15.0
 margin_top = 12.0
 margin_right = 23.0
@@ -475,7 +482,7 @@ __meta__ = {
 }
 
 [node name="Air_Flow" type="Area2D" parent="."]
-position = Vector2( 262.435, 409.511 )
+position = Vector2( 333.435, 515.511 )
 rotation = -2.35619
 scale = Vector2( 0.625, 0.625 )
 script = ExtResource( 12 )
@@ -521,7 +528,7 @@ __meta__ = {
 }
 
 [node name="Air_Speed" type="Area2D" parent="."]
-position = Vector2( 446.892, 409.511 )
+position = Vector2( 546.892, 506.511 )
 rotation = -2.35619
 scale = Vector2( 1.125, 1.125 )
 script = ExtResource( 12 )
@@ -567,10 +574,10 @@ __meta__ = {
 }
 
 [node name="Warning" type="TextureButton" parent="."]
-margin_left = 204.645
-margin_top = 460.893
-margin_right = 299.645
-margin_bottom = 523.893
+margin_left = 275.645
+margin_top = 566.893
+margin_right = 370.645
+margin_bottom = 629.893
 rect_scale = Vector2( 1.196, 0.732 )
 texture_normal = ExtResource( 16 )
 texture_pressed = ExtResource( 15 )
@@ -602,6 +609,241 @@ text = "Warning"
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="Radio_Menu" type="Node2D" parent="."]
+position = Vector2( 334.499, 180.433 )
+script = ExtResource( 19 )
+
+[node name="Center Background" type="Sprite" parent="Radio_Menu"]
+scale = Vector2( 0.558141, 0.48813 )
+texture = ExtResource( 2 )
+
+[node name="Preset1" type="TextureButton" parent="Radio_Menu"]
+margin_left = -184.129
+margin_top = -119.467
+margin_right = -89.1295
+margin_bottom = -56.4676
+rect_scale = Vector2( 0.75, 0.75 )
+rect_pivot_offset = Vector2( -126.59, -80.8903 )
+texture_normal = ExtResource( 4 )
+texture_pressed = ExtResource( 5 )
+expand = true
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CenterContainer" type="CenterContainer" parent="Radio_Menu/Preset1"]
+margin_left = 3.0
+margin_top = 3.0
+margin_right = 92.0
+margin_bottom = 59.0
+rect_clip_content = true
+mouse_filter = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Radio_Menu/Preset1/CenterContainer"]
+margin_left = 14.0
+margin_top = 14.0
+margin_right = 75.0
+margin_bottom = 41.0
+custom_fonts/font = SubResource( 1 )
+text = "92.3"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Preset2" type="TextureButton" parent="Radio_Menu"]
+margin_left = -183.859
+margin_top = -72.8334
+margin_right = -88.8596
+margin_bottom = -9.83362
+rect_scale = Vector2( 0.75, 0.75 )
+rect_pivot_offset = Vector2( -126.59, -80.8903 )
+texture_normal = ExtResource( 4 )
+texture_pressed = ExtResource( 5 )
+expand = true
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CenterContainer" type="CenterContainer" parent="Radio_Menu/Preset2"]
+margin_left = 3.0
+margin_top = 3.0
+margin_right = 92.0
+margin_bottom = 59.0
+rect_clip_content = true
+mouse_filter = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Radio_Menu/Preset2/CenterContainer"]
+margin_left = 14.0
+margin_top = 14.0
+margin_right = 75.0
+margin_bottom = 41.0
+custom_fonts/font = SubResource( 1 )
+text = "96.5"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Preset3" type="TextureButton" parent="Radio_Menu"]
+margin_left = -183.935
+margin_top = -25.282
+margin_right = -88.9356
+margin_bottom = 37.7178
+rect_scale = Vector2( 0.75, 0.75 )
+rect_pivot_offset = Vector2( -126.59, -80.8903 )
+texture_normal = ExtResource( 4 )
+texture_pressed = ExtResource( 5 )
+expand = true
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CenterContainer" type="CenterContainer" parent="Radio_Menu/Preset3"]
+margin_left = 3.0
+margin_top = 3.0
+margin_right = 92.0
+margin_bottom = 59.0
+rect_clip_content = true
+mouse_filter = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Radio_Menu/Preset3/CenterContainer"]
+margin_left = 5.0
+margin_top = 14.0
+margin_right = 84.0
+margin_bottom = 41.0
+custom_fonts/font = SubResource( 1 )
+text = "103.5"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AM" type="TextureButton" parent="Radio_Menu"]
+margin_left = -42.505
+margin_top = 112.781
+margin_right = 52.4946
+margin_bottom = 175.781
+rect_scale = Vector2( 0.75, 0.75 )
+rect_pivot_offset = Vector2( -126.59, -80.8903 )
+texture_normal = ExtResource( 4 )
+texture_pressed = ExtResource( 5 )
+expand = true
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CenterContainer" type="CenterContainer" parent="Radio_Menu/AM"]
+margin_left = 3.0
+margin_top = 3.0
+margin_right = 92.0
+margin_bottom = 59.0
+rect_clip_content = true
+mouse_filter = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Radio_Menu/AM/CenterContainer"]
+margin_left = 23.0
+margin_top = 14.0
+margin_right = 66.0
+margin_bottom = 41.0
+custom_fonts/font = SubResource( 1 )
+text = "AM"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="FM" type="TextureButton" parent="Radio_Menu"]
+margin_left = 28.959
+margin_top = 112.938
+margin_right = 123.959
+margin_bottom = 175.938
+rect_scale = Vector2( 0.75, 0.75 )
+rect_pivot_offset = Vector2( -126.59, -80.8903 )
+texture_normal = ExtResource( 4 )
+texture_pressed = ExtResource( 5 )
+expand = true
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CenterContainer" type="CenterContainer" parent="Radio_Menu/FM"]
+margin_left = 3.0
+margin_top = 3.0
+margin_right = 92.0
+margin_bottom = 59.0
+rect_clip_content = true
+mouse_filter = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Radio_Menu/FM/CenterContainer"]
+margin_left = 25.0
+margin_top = 14.0
+margin_right = 64.0
+margin_bottom = 41.0
+custom_fonts/font = SubResource( 1 )
+text = "FM"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CenterContainer" type="CenterContainer" parent="Radio_Menu"]
+margin_left = -216.0
+margin_top = -102.0
+margin_right = 215.0
+margin_bottom = 71.0
+mouse_filter = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Station" type="Label" parent="Radio_Menu/CenterContainer"]
+margin_left = 161.0
+margin_top = 63.0
+margin_right = 270.0
+margin_bottom = 109.0
+custom_fonts/font = SubResource( 4 )
+text = "00.0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TimeContainer" type="CenterContainer" parent="."]
+margin_left = 119.0
+margin_top = 39.5969
+margin_right = 550.0
+margin_bottom = 55.5969
+mouse_filter = 2
+script = ExtResource( 18 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Time" type="Label" parent="TimeContainer"]
+margin_left = 197.0
+margin_top = 1.0
+margin_right = 233.0
+margin_bottom = 15.0
+text = "00:00"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 [connection signal="pressed" from="Radio" to="Radio" method="_on_Button_pressed"]
 [connection signal="pressed" from="Music" to="Music" method="_on_Button_pressed"]
 [connection signal="pressed" from="Previous" to="Previous" method="_on_Button_pressed"]
@@ -612,8 +854,20 @@ __meta__ = {
 [connection signal="pressed" from="Home" to="Home" method="_on_Button_pressed"]
 [connection signal="input_event" from="Volume_Control" to="Volume_Control" method="_on_LeftKnob_input_event"]
 [connection signal="input_event" from="Radio_Control" to="Radio_Control" method="_on_LeftKnob_input_event"]
-[connection signal="input_event" from="Temperature" to="Temperature" method="_on_LeftKnob_input_event"]
+[connection signal="rotation_decrease" from="Radio_Control" to="Radio_Menu" method="_on_Radio_Control_rotation_decrease"]
+[connection signal="rotation_increase" from="Radio_Control" to="Radio_Menu" method="_on_Radio_Control_rotation_increase"]
+[connection signal="input_event" from="Air_Temp" to="Air_Temp" method="_on_LeftKnob_input_event"]
 [connection signal="input_event" from="Air_Flow" to="Air_Flow" method="_on_LeftKnob_input_event"]
 [connection signal="input_event" from="Air_Speed" to="Air_Speed" method="_on_LeftKnob_input_event"]
 [connection signal="activated" from="Warning" to="." method="_on_Warning_activated"]
 [connection signal="pressed" from="Warning" to="Warning" method="_on_Button_pressed"]
+[connection signal="activated" from="Radio_Menu/Preset1" to="Radio_Menu" method="_on_preset_activated"]
+[connection signal="pressed" from="Radio_Menu/Preset1" to="Radio_Menu/Preset1" method="_on_Button_pressed"]
+[connection signal="activated" from="Radio_Menu/Preset2" to="Radio_Menu" method="_on_preset_activated"]
+[connection signal="pressed" from="Radio_Menu/Preset2" to="Radio_Menu/Preset2" method="_on_Button_pressed"]
+[connection signal="activated" from="Radio_Menu/Preset3" to="Radio_Menu" method="_on_preset_activated"]
+[connection signal="pressed" from="Radio_Menu/Preset3" to="Radio_Menu/Preset3" method="_on_Button_pressed"]
+[connection signal="activated" from="Radio_Menu/AM" to="Radio_Menu" method="_on_AM_activated"]
+[connection signal="pressed" from="Radio_Menu/AM" to="Radio_Menu/AM" method="_on_Button_pressed"]
+[connection signal="activated" from="Radio_Menu/FM" to="Radio_Menu" method="_on_FM_activated"]
+[connection signal="pressed" from="Radio_Menu/FM" to="Radio_Menu/FM" method="_on_Button_pressed"]
