@@ -5,11 +5,9 @@ extends Node2D
 # var a = 2
 # var b = "text"
 
-var buttons = {
+var navButtons = {
 	"Radio": null,
 	"Music": null,
-	"Previous": null,
-	"Next": null,
 	"Phone": null,
 	"Map": null,
 	"Settings": null,
@@ -26,23 +24,30 @@ var knobs = {
 
 signal emergency
 
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	get_node(@"../Main/Control/Accelerate").connect("speed", self, "_a")
-	for button in buttons.keys():
-		buttons[button] = get_tree().get_root().find_node(button,true,false)
-		buttons[button].connect("activated",self,"_on_dash_click")
+	for button in navButtons.keys():
+		navButtons[button] = get_tree().get_root().find_node(button + "_Menu",true,false)
+		get_tree().get_root().find_node(button,true,false).connect("activated",self,"_on_dash_click")
 		
 	for knob in knobs.keys():
 		knobs[knob] = get_tree().get_root().find_node(knob,true,false)
 		knobs[knob].connect("rotation",self,"_on_knob_rotation")
-	
+
+
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass
 
+
 func _on_dash_click(button):
 	print(button, button.label_text)
+	for nav in navButtons.keys():
+		navButtons[nav].visible = false
+	navButtons[button.label_text].visible = true
+
 
 func _on_knob_rotation(knob, rot):
 #	print(knob.label_text, rot)

@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=2]
+[gd_scene load_steps=33 format=2]
 
 [ext_resource path="res://Scripts/Center Dashboard/dash-button.gd" type="Script" id=1]
 [ext_resource path="res://Sprites/screen-border.png" type="Texture" id=2]
@@ -19,6 +19,13 @@
 [ext_resource path="res://Sprites/center-background.png" type="Texture" id=17]
 [ext_resource path="res://Scripts/Center Dashboard/Time.gd" type="Script" id=18]
 [ext_resource path="res://Scripts/Center Dashboard/Radio_Menu.gd" type="Script" id=19]
+[ext_resource path="res://Scripts/Center Dashboard/Music_Menu.gd" type="Script" id=20]
+[ext_resource path="res://Sprites/Center Dashboard/Music/placeholder.png" type="Texture" id=21]
+[ext_resource path="res://Sprites/Center Dashboard/Music/placeholder_under.png" type="Texture" id=22]
+[ext_resource path="res://Sprites/Center Dashboard/Phone/home.png" type="Texture" id=23]
+[ext_resource path="res://Sprites/Center Dashboard/Settings/home.png" type="Texture" id=24]
+[ext_resource path="res://Sprites/Center Dashboard/Map/home.png" type="Texture" id=25]
+[ext_resource path="res://Sprites/Center Dashboard/Home/home.png" type="Texture" id=26]
 
 [sub_resource type="DynamicFont" id=1]
 size = 26
@@ -35,9 +42,20 @@ extents = Vector2( 49.9624, 50.9133 )
 size = 45
 font_data = ExtResource( 6 )
 
+[sub_resource type="DynamicFont" id=5]
+size = 14
+font_data = ExtResource( 6 )
+
+[sub_resource type="DynamicFont" id=6]
+size = 32
+font_data = ExtResource( 6 )
+
 [node name="Center" type="Node2D"]
 position = Vector2( 0, -1 )
 script = ExtResource( 3 )
+__meta__ = {
+"_edit_vertical_guides_": [  ]
+}
 
 [node name="Background" type="Sprite" parent="."]
 position = Vector2( 334.905, 342.698 )
@@ -45,9 +63,9 @@ scale = Vector2( 0.558141, 0.48813 )
 texture = ExtResource( 17 )
 
 [node name="Radio" type="TextureButton" parent="."]
-margin_left = 72.0054
+margin_left = 71.0054
 margin_top = 54.0202
-margin_right = 167.005
+margin_right = 166.005
 margin_bottom = 117.02
 rect_scale = Vector2( 0.75, 0.75 )
 rect_pivot_offset = Vector2( -126.59, -80.8903 )
@@ -82,9 +100,9 @@ __meta__ = {
 }
 
 [node name="Music" type="TextureButton" parent="."]
-margin_left = 72.0054
+margin_left = 71.0054
 margin_top = 101.02
-margin_right = 167.005
+margin_right = 166.005
 margin_bottom = 164.02
 rect_scale = Vector2( 0.75, 0.75 )
 rect_pivot_offset = Vector2( -126.59, -80.8903 )
@@ -119,9 +137,9 @@ __meta__ = {
 }
 
 [node name="Previous" type="TextureButton" parent="."]
-margin_left = 72.0054
+margin_left = 71.0054
 margin_top = 148.02
-margin_right = 120.005
+margin_right = 119.005
 margin_bottom = 211.02
 rect_scale = Vector2( 0.75, 0.75 )
 rect_pivot_offset = Vector2( -126.59, -80.8903 )
@@ -156,9 +174,9 @@ __meta__ = {
 }
 
 [node name="Next" type="TextureButton" parent="."]
-margin_left = 108.005
+margin_left = 107.005
 margin_top = 148.02
-margin_right = 155.005
+margin_right = 154.005
 margin_bottom = 211.02
 rect_scale = Vector2( 0.75, 0.75 )
 rect_pivot_offset = Vector2( -126.59, -80.8903 )
@@ -193,10 +211,10 @@ __meta__ = {
 }
 
 [node name="Phone" type="TextureButton" parent="."]
-margin_left = 848.091
-margin_top = 53.8332
-margin_right = 943.091
-margin_bottom = 116.833
+margin_left = 849.919
+margin_top = 54.1868
+margin_right = 944.919
+margin_bottom = 117.187
 rect_scale = Vector2( -0.75, 0.75 )
 rect_pivot_offset = Vector2( -126.59, -80.8903 )
 texture_normal = ExtResource( 4 )
@@ -231,10 +249,10 @@ __meta__ = {
 }
 
 [node name="Map" type="TextureButton" parent="."]
-margin_left = 848.091
-margin_top = 100.833
-margin_right = 943.091
-margin_bottom = 163.833
+margin_left = 849.919
+margin_top = 101.187
+margin_right = 944.919
+margin_bottom = 164.187
 rect_scale = Vector2( -0.75, 0.75 )
 rect_pivot_offset = Vector2( -126.59, -80.8903 )
 texture_normal = ExtResource( 4 )
@@ -269,10 +287,10 @@ __meta__ = {
 }
 
 [node name="Settings" type="TextureButton" parent="."]
-margin_left = 848.091
-margin_top = 147.833
-margin_right = 943.091
-margin_bottom = 210.833
+margin_left = 849.919
+margin_top = 148.187
+margin_right = 944.919
+margin_bottom = 211.187
 rect_scale = Vector2( -0.75, 0.75 )
 rect_pivot_offset = Vector2( -126.59, -80.8903 )
 texture_normal = ExtResource( 4 )
@@ -306,9 +324,9 @@ __meta__ = {
 }
 
 [node name="Home" type="TextureButton" parent="."]
-margin_left = 285.645
+margin_left = 284.645
 margin_top = 399.893
-margin_right = 380.645
+margin_right = 379.645
 margin_bottom = 462.893
 rect_pivot_offset = Vector2( -126.59, -80.8903 )
 texture_normal = ExtResource( 14 )
@@ -343,7 +361,7 @@ __meta__ = {
 }
 
 [node name="Volume_Control" type="Area2D" parent="."]
-position = Vector2( 76.3579, 257.401 )
+position = Vector2( 75.3579, 257.401 )
 rotation = -2.35619
 scale = Vector2( 0.65, 0.65 )
 script = ExtResource( 12 )
@@ -387,13 +405,13 @@ __meta__ = {
 }
 
 [node name="Radio_Control" type="Area2D" parent="."]
-position = Vector2( 592.358, 257.401 )
+position = Vector2( 591.358, 257.401 )
 rotation = -2.35619
 scale = Vector2( 0.65, 0.65 )
 script = ExtResource( 12 )
 min_rot = -3600
 max_rot = 3600
-sensitivity = 1.0
+sensitivity = 10.0
 
 [node name="Label" type="Label" parent="Radio_Control"]
 visible = false
@@ -436,7 +454,7 @@ __meta__ = {
 }
 
 [node name="Air_Temp" type="Area2D" parent="."]
-position = Vector2( 114.892, 506.511 )
+position = Vector2( 113.892, 506.511 )
 rotation = -2.35619
 scale = Vector2( 1.125, 1.125 )
 script = ExtResource( 12 )
@@ -482,7 +500,7 @@ __meta__ = {
 }
 
 [node name="Air_Flow" type="Area2D" parent="."]
-position = Vector2( 333.435, 515.511 )
+position = Vector2( 332.435, 515.511 )
 rotation = -2.35619
 scale = Vector2( 0.625, 0.625 )
 script = ExtResource( 12 )
@@ -528,7 +546,7 @@ __meta__ = {
 }
 
 [node name="Air_Speed" type="Area2D" parent="."]
-position = Vector2( 546.892, 506.511 )
+position = Vector2( 545.892, 506.511 )
 rotation = -2.35619
 scale = Vector2( 1.125, 1.125 )
 script = ExtResource( 12 )
@@ -574,9 +592,9 @@ __meta__ = {
 }
 
 [node name="Warning" type="TextureButton" parent="."]
-margin_left = 275.645
+margin_left = 274.645
 margin_top = 566.893
-margin_right = 370.645
+margin_right = 369.645
 margin_bottom = 629.893
 rect_scale = Vector2( 1.196, 0.732 )
 texture_normal = ExtResource( 16 )
@@ -611,7 +629,7 @@ __meta__ = {
 }
 
 [node name="Radio_Menu" type="Node2D" parent="."]
-position = Vector2( 334.499, 180.433 )
+position = Vector2( 333.499, 180.433 )
 script = ExtResource( 19 )
 
 [node name="Center Background" type="Sprite" parent="Radio_Menu"]
@@ -620,9 +638,9 @@ texture = ExtResource( 2 )
 
 [node name="Preset1" type="TextureButton" parent="Radio_Menu"]
 margin_left = -184.129
-margin_top = -119.467
+margin_top = -106.467
 margin_right = -89.1295
-margin_bottom = -56.4676
+margin_bottom = -43.4675
 rect_scale = Vector2( 0.75, 0.75 )
 rect_pivot_offset = Vector2( -126.59, -80.8903 )
 texture_normal = ExtResource( 4 )
@@ -650,16 +668,16 @@ margin_top = 14.0
 margin_right = 75.0
 margin_bottom = 41.0
 custom_fonts/font = SubResource( 1 )
-text = "92.3"
+text = "00.0"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Preset2" type="TextureButton" parent="Radio_Menu"]
 margin_left = -183.859
-margin_top = -72.8334
+margin_top = -59.8334
 margin_right = -88.8596
-margin_bottom = -9.83362
+margin_bottom = 3.16637
 rect_scale = Vector2( 0.75, 0.75 )
 rect_pivot_offset = Vector2( -126.59, -80.8903 )
 texture_normal = ExtResource( 4 )
@@ -687,16 +705,16 @@ margin_top = 14.0
 margin_right = 75.0
 margin_bottom = 41.0
 custom_fonts/font = SubResource( 1 )
-text = "96.5"
+text = "00.0"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Preset3" type="TextureButton" parent="Radio_Menu"]
 margin_left = -183.935
-margin_top = -25.282
+margin_top = -12.282
 margin_right = -88.9356
-margin_bottom = 37.7178
+margin_bottom = 50.7178
 rect_scale = Vector2( 0.75, 0.75 )
 rect_pivot_offset = Vector2( -126.59, -80.8903 )
 texture_normal = ExtResource( 4 )
@@ -719,12 +737,12 @@ __meta__ = {
 }
 
 [node name="Label" type="Label" parent="Radio_Menu/Preset3/CenterContainer"]
-margin_left = 5.0
+margin_left = 14.0
 margin_top = 14.0
-margin_right = 84.0
+margin_right = 75.0
 margin_bottom = 41.0
 custom_fonts/font = SubResource( 1 )
-text = "103.5"
+text = "00.0"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -824,21 +842,277 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="TimeContainer" type="CenterContainer" parent="."]
-margin_left = 119.0
-margin_top = 39.5969
-margin_right = 550.0
-margin_bottom = 55.5969
+[node name="Music_Menu" type="Node2D" parent="."]
+visible = false
+position = Vector2( 110.253, 34.0091 )
+script = ExtResource( 20 )
+
+[node name="Lighter" type="ColorRect" parent="Music_Menu"]
+margin_right = 446.5
+margin_bottom = 218.0
+color = Color( 0.403922, 0.490196, 0.917647, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Darker" type="ColorRect" parent="Music_Menu"]
+margin_top = 218.0
+margin_right = 446.5
+margin_bottom = 293.0
+color = Color( 0.152941, 0.282353, 0.917647, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="Music_Menu"]
+position = Vector2( 99.8371, 120.538 )
+scale = Vector2( 0.405066, 0.405066 )
+texture = ExtResource( 21 )
+
+[node name="Info" type="VBoxContainer" parent="Music_Menu"]
+margin_left = 189.0
+margin_top = 42.0
+margin_right = 432.0
+margin_bottom = 202.0
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Album" type="Label" parent="Music_Menu/Info"]
+margin_top = 8.0
+margin_right = 243.0
+margin_bottom = 23.0
+custom_fonts/font = SubResource( 5 )
+text = "This is the album"
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Title" type="Label" parent="Music_Menu/Info"]
+margin_top = 27.0
+margin_right = 243.0
+margin_bottom = 132.0
+custom_fonts/font = SubResource( 6 )
+text = "This is the name of the song"
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Artist" type="Label" parent="Music_Menu/Info"]
+margin_top = 136.0
+margin_right = 243.0
+margin_bottom = 151.0
+custom_fonts/font = SubResource( 5 )
+text = "This is the artist"
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureProgress" type="TextureProgress" parent="Music_Menu"]
+margin_left = 0.277283
+margin_top = 216.5
+margin_right = 446.277
+margin_bottom = 219.5
+step = 0.1
+value = 30.0
+texture_under = ExtResource( 22 )
+texture_progress = ExtResource( 22 )
+tint_under = Color( 0.152941, 0.152941, 0.152941, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Controls" type="HBoxContainer" parent="Music_Menu"]
+margin_left = 0.334061
+margin_top = 220.111
+margin_right = 446.334
+margin_bottom = 293.111
+rect_min_size = Vector2( 100, 0 )
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Rewind" type="TextureButton" parent="Music_Menu/Controls"]
+margin_left = 69.0
+margin_right = 169.0
+margin_bottom = 73.0
+rect_min_size = Vector2( 100, 0 )
+rect_pivot_offset = Vector2( -126.59, -80.8903 )
+texture_normal = ExtResource( 4 )
+texture_pressed = ExtResource( 5 )
+expand = true
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CenterContainer" type="CenterContainer" parent="Music_Menu/Controls/Rewind"]
+margin_left = 5.0
+margin_right = 94.0
+margin_bottom = 73.0
+rect_min_size = Vector2( 0, 73 )
+rect_clip_content = true
+mouse_filter = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Music_Menu/Controls/Rewind/CenterContainer"]
+margin_left = 20.0
+margin_top = 23.0
+margin_right = 69.0
+margin_bottom = 50.0
+custom_fonts/font = SubResource( 1 )
+text = "-10"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Pause" type="TextureButton" parent="Music_Menu/Controls"]
+margin_left = 173.0
+margin_right = 273.0
+margin_bottom = 73.0
+rect_min_size = Vector2( 100, 0 )
+rect_pivot_offset = Vector2( -126.59, -80.8903 )
+texture_normal = ExtResource( 4 )
+texture_pressed = ExtResource( 5 )
+expand = true
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CenterContainer" type="CenterContainer" parent="Music_Menu/Controls/Pause"]
+margin_left = 5.0
+margin_right = 94.0
+margin_bottom = 73.0
+rect_min_size = Vector2( 0, 73 )
+rect_clip_content = true
+mouse_filter = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Music_Menu/Controls/Pause/CenterContainer"]
+margin_left = 5.0
+margin_top = 23.0
+margin_right = 83.0
+margin_bottom = 50.0
+custom_fonts/font = SubResource( 1 )
+text = "Pause"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Forward" type="TextureButton" parent="Music_Menu/Controls"]
+margin_left = 277.0
+margin_right = 377.0
+margin_bottom = 73.0
+rect_min_size = Vector2( 100, 0 )
+rect_pivot_offset = Vector2( -126.59, -80.8903 )
+texture_normal = ExtResource( 4 )
+texture_pressed = ExtResource( 5 )
+expand = true
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CenterContainer" type="CenterContainer" parent="Music_Menu/Controls/Forward"]
+margin_left = 5.0
+margin_right = 94.0
+margin_bottom = 73.0
+rect_min_size = Vector2( 0, 73 )
+rect_clip_content = true
+mouse_filter = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Music_Menu/Controls/Forward/CenterContainer"]
+margin_left = 17.0
+margin_top = 23.0
+margin_right = 71.0
+margin_bottom = 50.0
+custom_fonts/font = SubResource( 1 )
+text = "+10"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Phone_Menu" type="Node2D" parent="."]
+visible = false
+position = Vector2( 333.541, 190.034 )
+
+[node name="Sprite" type="Sprite" parent="Phone_Menu"]
+texture = ExtResource( 23 )
+
+[node name="Map_Menu" type="Node2D" parent="."]
+visible = false
+position = Vector2( 110.253, 34.0091 )
+
+[node name="Sprite" type="Sprite" parent="Map_Menu"]
+position = Vector2( 223.288, 156.025 )
+texture = ExtResource( 25 )
+
+[node name="Settings_Menu" type="Node2D" parent="."]
+visible = false
+position = Vector2( 110.253, 34.0091 )
+
+[node name="Sprite" type="Sprite" parent="Settings_Menu"]
+position = Vector2( 223.288, 156.025 )
+texture = ExtResource( 24 )
+
+[node name="Home_Menu" type="Node2D" parent="."]
+visible = false
+position = Vector2( 110.253, 34.0091 )
+
+[node name="Sprite" type="Sprite" parent="Home_Menu"]
+position = Vector2( 223.288, 156.025 )
+texture = ExtResource( 26 )
+
+[node name="Time" type="Node2D" parent="."]
+position = Vector2( 110.25, 33.9923 )
+
+[node name="ColorRect" type="ColorRect" parent="Time"]
+margin_left = 0.181458
+margin_top = -0.0185966
+margin_right = 446.664
+margin_bottom = 19.9814
+color = Color( 0.215686, 0.301961, 0.776471, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect2" type="ColorRect" parent="Time"]
+margin_left = 0.181458
+margin_top = -0.0185966
+margin_right = 446.664
+margin_bottom = 2.5614
+color = Color( 0.278431, 0.384314, 1, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TimeContainer" type="CenterContainer" parent="Time"]
+margin_top = 4.0
+margin_right = 446.0
+margin_bottom = 20.0
 mouse_filter = 2
 script = ExtResource( 18 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Time" type="Label" parent="TimeContainer"]
-margin_left = 197.0
+[node name="Time" type="Label" parent="Time/TimeContainer"]
+margin_left = 205.0
 margin_top = 1.0
-margin_right = 233.0
+margin_right = 241.0
 margin_bottom = 15.0
 text = "00:00"
 __meta__ = {
@@ -846,7 +1120,9 @@ __meta__ = {
 }
 [connection signal="pressed" from="Radio" to="Radio" method="_on_Button_pressed"]
 [connection signal="pressed" from="Music" to="Music" method="_on_Button_pressed"]
+[connection signal="activated" from="Previous" to="Music_Menu" method="_on_Previous_activated"]
 [connection signal="pressed" from="Previous" to="Previous" method="_on_Button_pressed"]
+[connection signal="activated" from="Next" to="Music_Menu" method="_on_Next_activated"]
 [connection signal="pressed" from="Next" to="Next" method="_on_Button_pressed"]
 [connection signal="pressed" from="Phone" to="Phone" method="_on_Button_pressed"]
 [connection signal="pressed" from="Map" to="Map" method="_on_Button_pressed"]
@@ -871,3 +1147,9 @@ __meta__ = {
 [connection signal="pressed" from="Radio_Menu/AM" to="Radio_Menu/AM" method="_on_Button_pressed"]
 [connection signal="activated" from="Radio_Menu/FM" to="Radio_Menu" method="_on_FM_activated"]
 [connection signal="pressed" from="Radio_Menu/FM" to="Radio_Menu/FM" method="_on_Button_pressed"]
+[connection signal="activated" from="Music_Menu/Controls/Rewind" to="Music_Menu" method="_on_Rewind_activated"]
+[connection signal="pressed" from="Music_Menu/Controls/Rewind" to="Music_Menu/Controls/Rewind" method="_on_Button_pressed"]
+[connection signal="activated" from="Music_Menu/Controls/Pause" to="Music_Menu" method="_on_Pause_activated"]
+[connection signal="pressed" from="Music_Menu/Controls/Pause" to="Music_Menu/Controls/Pause" method="_on_Button_pressed"]
+[connection signal="activated" from="Music_Menu/Controls/Forward" to="Music_Menu" method="_on_Forward_activated"]
+[connection signal="pressed" from="Music_Menu/Controls/Forward" to="Music_Menu/Controls/Forward" method="_on_Button_pressed"]
