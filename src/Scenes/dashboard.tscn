@@ -15,7 +15,7 @@ grow_vertical = 2
 mouse_filter = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-color = Color( 0.0705882, 0.0745098, 0.105882, 1 )
+color = Color( 0.164706, 0.215686, 0.623529, 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }

@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=2]
+[gd_scene load_steps=58 format=2]
 
 [ext_resource path="res://Scripts/Center Dashboard/dash-button.gd" type="Script" id=1]
 [ext_resource path="res://Sprites/screen-border.png" type="Texture" id=2]
@@ -26,6 +26,10 @@
 [ext_resource path="res://Sprites/Center Dashboard/Settings/home.png" type="Texture" id=24]
 [ext_resource path="res://Sprites/Center Dashboard/Map/home.png" type="Texture" id=25]
 [ext_resource path="res://Sprites/Center Dashboard/Home/home.png" type="Texture" id=26]
+[ext_resource path="res://Scripts/Center Dashboard/Phone_Menu.gd" type="Script" id=27]
+[ext_resource path="res://Scripts/Center Dashboard/Map_Menu.gd" type="Script" id=28]
+[ext_resource path="res://StyleBox/rounded_blue_hover.tres" type="StyleBox" id=30]
+[ext_resource path="res://StyleBox/rounded_blue_clicked.tres" type="StyleBox" id=31]
 
 [sub_resource type="DynamicFont" id=1]
 size = 26
@@ -49,6 +53,134 @@ font_data = ExtResource( 6 )
 [sub_resource type="DynamicFont" id=6]
 size = 32
 font_data = ExtResource( 6 )
+
+[sub_resource type="StyleBoxFlat" id=7]
+bg_color = Color( 0.54902, 0.615686, 1, 1 )
+
+[sub_resource type="DynamicFontData" id=8]
+font_path = "res://Fonts/mini-wakuwaku.otf"
+
+[sub_resource type="DynamicFont" id=9]
+size = 28
+font_data = SubResource( 8 )
+
+[sub_resource type="StyleBoxFlat" id=10]
+bg_color = Color( 0.277723, 0.377049, 0.92334, 1 )
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id=11]
+bg_color = Color( 0.176471, 0.243137, 0.615686, 1 )
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id=12]
+bg_color = Color( 0.215686, 0.301961, 0.776471, 1 )
+border_color = Color( 0.278431, 0.384314, 1, 1 )
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id=13]
+bg_color = Color( 0.277723, 0.377049, 0.92334, 1 )
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id=14]
+bg_color = Color( 0.176471, 0.243137, 0.615686, 1 )
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id=15]
+bg_color = Color( 0.215686, 0.301961, 0.776471, 1 )
+border_color = Color( 0.278431, 0.384314, 1, 1 )
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id=16]
+bg_color = Color( 0.277723, 0.377049, 0.92334, 1 )
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id=17]
+bg_color = Color( 0.176471, 0.243137, 0.615686, 1 )
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id=18]
+bg_color = Color( 0.215686, 0.301961, 0.776471, 1 )
+border_color = Color( 0.278431, 0.384314, 1, 1 )
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id=19]
+bg_color = Color( 0.215686, 0.301961, 0.776471, 1 )
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+
+[sub_resource type="StyleBoxTexture" id=20]
+texture = ExtResource( 25 )
+region_rect = Rect2( 0, 0, 447, 272 )
+
+[sub_resource type="StyleBoxFlat" id=21]
+bg_color = Color( 0.0862745, 0.121569, 0.141176, 1 )
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[sub_resource type="StyleBoxFlat" id=22]
+bg_color = Color( 0.141176, 0.2, 0.231373, 1 )
+
+[sub_resource type="StyleBoxFlat" id=23]
+bg_color = Color( 0.0862745, 0.121569, 0.141176, 1 )
+border_color = Color( 0.290196, 0.129412, 0.129412, 1 )
+
+[sub_resource type="StyleBoxFlat" id=24]
+bg_color = Color( 0.141176, 0.2, 0.231373, 1 )
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+corner_detail = 1
+
+[sub_resource type="StyleBoxFlat" id=25]
+bg_color = Color( 0.0862745, 0.121569, 0.141176, 1 )
+border_color = Color( 0.290196, 0.129412, 0.129412, 1 )
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[sub_resource type="StyleBoxFlat" id=26]
+bg_color = Color( 0.2, 0.247059, 0.282353, 1 )
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[sub_resource type="StyleBoxFlat" id=27]
+bg_color = Color( 0.443137, 0.14902, 0.14902, 0 )
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color( 0.278431, 0.384314, 1, 1 )
 
 [node name="Center" type="Node2D"]
 position = Vector2( 0, -1 )
@@ -629,6 +761,7 @@ __meta__ = {
 }
 
 [node name="Radio_Menu" type="Node2D" parent="."]
+visible = false
 position = Vector2( 333.499, 180.433 )
 script = ExtResource( 19 )
 
@@ -822,10 +955,10 @@ __meta__ = {
 }
 
 [node name="CenterContainer" type="CenterContainer" parent="Radio_Menu"]
-margin_left = -216.0
-margin_top = -102.0
-margin_right = 215.0
-margin_bottom = 71.0
+margin_left = -215.666
+margin_top = -102.166
+margin_right = 215.334
+margin_bottom = 70.8337
 mouse_filter = 2
 __meta__ = {
 "_edit_use_anchors_": false
@@ -938,8 +1071,8 @@ __meta__ = {
 }
 
 [node name="Rewind" type="TextureButton" parent="Music_Menu/Controls"]
-margin_left = 69.0
-margin_right = 169.0
+margin_left = 68.0
+margin_right = 168.0
 margin_bottom = 73.0
 rect_min_size = Vector2( 100, 0 )
 rect_pivot_offset = Vector2( -126.59, -80.8903 )
@@ -974,8 +1107,8 @@ __meta__ = {
 }
 
 [node name="Pause" type="TextureButton" parent="Music_Menu/Controls"]
-margin_left = 173.0
-margin_right = 273.0
+margin_left = 172.0
+margin_right = 272.0
 margin_bottom = 73.0
 rect_min_size = Vector2( 100, 0 )
 rect_pivot_offset = Vector2( -126.59, -80.8903 )
@@ -1010,8 +1143,8 @@ __meta__ = {
 }
 
 [node name="Forward" type="TextureButton" parent="Music_Menu/Controls"]
-margin_left = 277.0
-margin_right = 377.0
+margin_left = 276.0
+margin_right = 376.0
 margin_bottom = 73.0
 rect_min_size = Vector2( 100, 0 )
 rect_pivot_offset = Vector2( -126.59, -80.8903 )
@@ -1046,19 +1179,289 @@ __meta__ = {
 }
 
 [node name="Phone_Menu" type="Node2D" parent="."]
-visible = false
 position = Vector2( 333.541, 190.034 )
+script = ExtResource( 27 )
+
+[node name="Control" type="Control" parent="Phone_Menu"]
+margin_left = -217.0
+margin_top = -137.0
+margin_right = 220.0
+margin_bottom = 133.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel" type="Panel" parent="Phone_Menu/Control"]
+margin_left = -5.0
+margin_right = 437.0
+margin_bottom = 270.0
+custom_styles/panel = SubResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Phone_Menu/Control/Panel"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -28.0
+margin_top = 6.0
+margin_right = 100.0
+margin_bottom = 35.0
+custom_fonts/font = SubResource( 9 )
+text = "Recents"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Content" type="Control" parent="Phone_Menu/Control/Panel"]
+margin_left = 77.0
+margin_top = 6.0
+margin_right = 437.0
+margin_bottom = 242.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="One" type="Button" parent="Phone_Menu/Control/Panel/Content"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -165.5
+margin_top = -87.5
+margin_right = 165.5
+margin_bottom = -36.5
+custom_styles/hover = SubResource( 10 )
+custom_styles/pressed = SubResource( 11 )
+custom_styles/normal = SubResource( 12 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Phone_Menu/Control/Panel/Content/One"]
+margin_right = 40.0
+margin_bottom = 14.0
+text = "Mom
+Missed call
+7:06pm"
+
+[node name="Contacts" type="Label" parent="Phone_Menu/Control/Panel/Content/One"]
+visible = false
+margin_right = 40.0
+margin_bottom = 14.0
+text = "Mom
+555-555-555"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Two" type="Button" parent="Phone_Menu/Control/Panel/Content"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -165.5
+margin_top = -34.5
+margin_right = 165.5
+margin_bottom = 16.5
+custom_styles/hover = SubResource( 13 )
+custom_styles/pressed = SubResource( 14 )
+custom_styles/normal = SubResource( 15 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Phone_Menu/Control/Panel/Content/Two"]
+margin_right = 40.0
+margin_bottom = 14.0
+text = "Mom
+Missed call
+7:04pm"
+
+[node name="Contacts" type="Label" parent="Phone_Menu/Control/Panel/Content/Two"]
+visible = false
+margin_right = 40.0
+margin_bottom = 14.0
+text = "Dad
+555-555-555"
+
+[node name="Three" type="Button" parent="Phone_Menu/Control/Panel/Content"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -165.5
+margin_top = 18.5
+margin_right = 165.5
+margin_bottom = 69.5
+custom_styles/hover = SubResource( 16 )
+custom_styles/pressed = SubResource( 17 )
+custom_styles/normal = SubResource( 18 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Phone_Menu/Control/Panel/Content/Three"]
+margin_right = 40.0
+margin_bottom = 14.0
+text = "Mom
+Missed call
+7:03pm"
+
+[node name="Contacts" type="Label" parent="Phone_Menu/Control/Panel/Content/Three"]
+visible = false
+margin_right = 40.0
+margin_bottom = 14.0
+text = "Dog
+555-555-555"
+
+[node name="Recents" type="Button" parent="Phone_Menu/Control/Panel"]
+margin_left = 17.4309
+margin_top = 35.0
+margin_right = 67.4309
+margin_bottom = 85.0
+custom_styles/hover = ExtResource( 30 )
+custom_styles/pressed = ExtResource( 31 )
+custom_styles/normal = SubResource( 19 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Contacts" type="Button" parent="Phone_Menu/Control/Panel"]
+margin_left = 17.4309
+margin_top = 94.5929
+margin_right = 67.4309
+margin_bottom = 144.593
+custom_styles/hover = ExtResource( 30 )
+custom_styles/pressed = ExtResource( 31 )
+custom_styles/normal = SubResource( 19 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Sprite" type="Sprite" parent="Phone_Menu"]
+visible = false
 texture = ExtResource( 23 )
 
 [node name="Map_Menu" type="Node2D" parent="."]
 visible = false
 position = Vector2( 110.253, 34.0091 )
+script = ExtResource( 28 )
+
+[node name="Panel" type="Panel" parent="Map_Menu"]
+margin_top = 20.0
+margin_right = 447.0
+margin_bottom = 292.0
+custom_styles/panel = SubResource( 20 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Sprite" type="Sprite" parent="Map_Menu"]
-position = Vector2( 223.288, 156.025 )
+visible = false
+position = Vector2( 223.819, 155.994 )
 texture = ExtResource( 25 )
+
+[node name="bg_panel" type="Panel" parent="Map_Menu"]
+visible = false
+margin_left = 12.7189
+margin_top = 25.0353
+margin_right = 214.719
+margin_bottom = 173.035
+mouse_filter = 2
+custom_styles/panel = SubResource( 21 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Option_One" type="Button" parent="Map_Menu/bg_panel"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -101.0
+margin_top = -34.2433
+margin_right = 101.0
+margin_bottom = 19.7567
+mouse_filter = 1
+custom_styles/hover = SubResource( 22 )
+custom_styles/normal = SubResource( 23 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Option_Two" type="Button" parent="Map_Menu/bg_panel"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -101.0
+margin_top = -54.0
+margin_right = 101.0
+mouse_filter = 1
+custom_styles/hover = SubResource( 24 )
+custom_styles/normal = SubResource( 25 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="search" type="Panel" parent="Map_Menu/bg_panel"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -95.0
+margin_top = 4.0
+margin_right = 95.0
+margin_bottom = 37.0
+custom_styles/panel = SubResource( 26 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="OptionButton" type="OptionButton" parent="Map_Menu/bg_panel"]
+margin_left = 6.28111
+margin_top = 3.96472
+margin_right = 197.281
+margin_bottom = 38.9647
+pressed = true
+keep_pressed_outside = true
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="collapsed" type="Panel" parent="Map_Menu"]
+margin_left = 13.0
+margin_top = 25.0
+margin_right = 215.0
+margin_bottom = 66.0
+mouse_filter = 2
+custom_styles/panel = SubResource( 21 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="search" type="Panel" parent="Map_Menu/collapsed"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -95.0
+margin_top = 4.0
+margin_right = 95.0
+margin_bottom = 37.0
+custom_styles/panel = SubResource( 26 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="OptionButton" type="OptionButton" parent="Map_Menu/collapsed/search"]
+margin_right = 191.0
+margin_bottom = 35.0
+pressed = true
+keep_pressed_outside = true
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Settings_Menu" type="Node2D" parent="."]
 visible = false
@@ -1099,17 +1502,29 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="TimeContainer" type="CenterContainer" parent="Time"]
-margin_top = 4.0
-margin_right = 446.0
-margin_bottom = 20.0
+[node name="Panel" type="Panel" parent="Time"]
+margin_right = 447.0
+margin_bottom = 293.0
+mouse_filter = 2
+custom_styles/panel = SubResource( 27 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TimeContainer" type="CenterContainer" parent="Time/Panel"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -223.0
+margin_top = 5.0
+margin_right = 223.0
+margin_bottom = 21.0
 mouse_filter = 2
 script = ExtResource( 18 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Time" type="Label" parent="Time/TimeContainer"]
+[node name="Time" type="Label" parent="Time/Panel/TimeContainer"]
 margin_left = 205.0
 margin_top = 1.0
 margin_right = 241.0
@@ -1153,3 +1568,7 @@ __meta__ = {
 [connection signal="pressed" from="Music_Menu/Controls/Pause" to="Music_Menu/Controls/Pause" method="_on_Button_pressed"]
 [connection signal="activated" from="Music_Menu/Controls/Forward" to="Music_Menu" method="_on_Forward_activated"]
 [connection signal="pressed" from="Music_Menu/Controls/Forward" to="Music_Menu/Controls/Forward" method="_on_Button_pressed"]
+[connection signal="pressed" from="Phone_Menu/Control/Panel/Recents" to="Phone_Menu" method="_on_Recents_pressed"]
+[connection signal="pressed" from="Phone_Menu/Control/Panel/Contacts" to="Phone_Menu" method="_on_Contacts_pressed"]
+[connection signal="pressed" from="Map_Menu/bg_panel/OptionButton" to="Map_Menu" method="_on_OptionButton_pressed"]
+[connection signal="pressed" from="Map_Menu/collapsed/search/OptionButton" to="Map_Menu" method="_on_OptionButton_pressed"]
