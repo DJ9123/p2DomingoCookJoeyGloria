@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=2]
+[gd_scene load_steps=33 format=2]
 
 [ext_resource path="res://Scripts/Center Dashboard/dash-button.gd" type="Script" id=1]
 [ext_resource path="res://Sprites/screen-border.png" type="Texture" id=2]
@@ -22,6 +22,10 @@
 [ext_resource path="res://Scripts/Center Dashboard/Music_Menu.gd" type="Script" id=20]
 [ext_resource path="res://Sprites/Center Dashboard/Music/placeholder.png" type="Texture" id=21]
 [ext_resource path="res://Sprites/Center Dashboard/Music/placeholder_under.png" type="Texture" id=22]
+[ext_resource path="res://Sprites/Center Dashboard/Phone/home.png" type="Texture" id=23]
+[ext_resource path="res://Sprites/Center Dashboard/Settings/home.png" type="Texture" id=24]
+[ext_resource path="res://Sprites/Center Dashboard/Map/home.png" type="Texture" id=25]
+[ext_resource path="res://Sprites/Center Dashboard/Home/home.png" type="Texture" id=26]
 
 [sub_resource type="DynamicFont" id=1]
 size = 26
@@ -634,9 +638,9 @@ texture = ExtResource( 2 )
 
 [node name="Preset1" type="TextureButton" parent="Radio_Menu"]
 margin_left = -184.129
-margin_top = -119.467
+margin_top = -106.467
 margin_right = -89.1295
-margin_bottom = -56.4676
+margin_bottom = -43.4675
 rect_scale = Vector2( 0.75, 0.75 )
 rect_pivot_offset = Vector2( -126.59, -80.8903 )
 texture_normal = ExtResource( 4 )
@@ -671,9 +675,9 @@ __meta__ = {
 
 [node name="Preset2" type="TextureButton" parent="Radio_Menu"]
 margin_left = -183.859
-margin_top = -72.8334
+margin_top = -59.8334
 margin_right = -88.8596
-margin_bottom = -9.83362
+margin_bottom = 3.16637
 rect_scale = Vector2( 0.75, 0.75 )
 rect_pivot_offset = Vector2( -126.59, -80.8903 )
 texture_normal = ExtResource( 4 )
@@ -708,9 +712,9 @@ __meta__ = {
 
 [node name="Preset3" type="TextureButton" parent="Radio_Menu"]
 margin_left = -183.935
-margin_top = -25.282
+margin_top = -12.282
 margin_right = -88.9356
-margin_bottom = 37.7178
+margin_bottom = 50.7178
 rect_scale = Vector2( 0.75, 0.75 )
 rect_pivot_offset = Vector2( -126.59, -80.8903 )
 texture_normal = ExtResource( 4 )
@@ -839,6 +843,7 @@ __meta__ = {
 }
 
 [node name="Music_Menu" type="Node2D" parent="."]
+visible = false
 position = Vector2( 110.253, 34.0091 )
 script = ExtResource( 20 )
 
@@ -912,6 +917,7 @@ margin_left = 0.277283
 margin_top = 216.5
 margin_right = 446.277
 margin_bottom = 219.5
+step = 0.1
 value = 30.0
 texture_under = ExtResource( 22 )
 texture_progress = ExtResource( 22 )
@@ -1038,6 +1044,37 @@ text = "+10"
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="Phone_Menu" type="Node2D" parent="."]
+visible = false
+position = Vector2( 333.541, 190.034 )
+
+[node name="Sprite" type="Sprite" parent="Phone_Menu"]
+texture = ExtResource( 23 )
+
+[node name="Map_Menu" type="Node2D" parent="."]
+visible = false
+position = Vector2( 110.253, 34.0091 )
+
+[node name="Sprite" type="Sprite" parent="Map_Menu"]
+position = Vector2( 223.288, 156.025 )
+texture = ExtResource( 25 )
+
+[node name="Settings_Menu" type="Node2D" parent="."]
+visible = false
+position = Vector2( 110.253, 34.0091 )
+
+[node name="Sprite" type="Sprite" parent="Settings_Menu"]
+position = Vector2( 223.288, 156.025 )
+texture = ExtResource( 24 )
+
+[node name="Home_Menu" type="Node2D" parent="."]
+visible = false
+position = Vector2( 110.253, 34.0091 )
+
+[node name="Sprite" type="Sprite" parent="Home_Menu"]
+position = Vector2( 223.288, 156.025 )
+texture = ExtResource( 26 )
 
 [node name="Time" type="Node2D" parent="."]
 position = Vector2( 110.25, 33.9923 )

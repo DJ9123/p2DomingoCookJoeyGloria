@@ -141,10 +141,9 @@ func _ready():
 func _process(delta):
 	if not paused:
 		elapsed += delta
-		progress.value = elapsed / nowPlayingLength * 100
-		if progress.value >= 100:
-			_on_Next_activated(null)
-			
+		update_progress()
+
+
 func update_progress():
 	progress.value = elapsed / nowPlayingLength * 100
 	if progress.value >= 100:
@@ -153,8 +152,6 @@ func update_progress():
 
 func updateNowPlaying():
 	print("nowPlaying: ", nowPlaying)
-	print(Color(nowPlaying.lighter))
-	print(Color(nowPlaying.darker))
 	elapsed = 0
 	paused = false
 	lighter.color = Color(nowPlaying.lighter)
@@ -163,8 +160,8 @@ func updateNowPlaying():
 	album.text = nowPlaying.album
 	title.text = nowPlaying.title
 	artist.text = nowPlaying.artist
-	
-	
+
+
 func _on_Previous_activated(_button):
 	nowPlayingIndex -= 1
 	nowPlaying = nowPlayingList[nowPlayingIndex % nowPlayingList.size()]
