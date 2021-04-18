@@ -1,8 +1,8 @@
 extends Area2D
 
 var start_pos = Vector2()
-var start_rot
 
+export(int) var start_rot = 0
 export(int) var min_rot = 0
 export(int) var max_rot = 270
 export(float) var sensitivity = 0.5 # higher = more sensitive
@@ -15,6 +15,7 @@ signal rotation_decrease
 
 func _ready():
 	self.label_text = $Label.text
+	$Sprite.rotation_degrees = start_rot
 	set_process(false)
 
 func _process(_delta):

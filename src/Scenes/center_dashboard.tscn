@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=2]
+[gd_scene load_steps=38 format=2]
 
 [ext_resource path="res://Scripts/Center Dashboard/dash-button.gd" type="Script" id=1]
 [ext_resource path="res://Sprites/screen-border.png" type="Texture" id=2]
@@ -26,6 +26,11 @@
 [ext_resource path="res://Sprites/Center Dashboard/Settings/home.png" type="Texture" id=24]
 [ext_resource path="res://Sprites/Center Dashboard/Map/home.png" type="Texture" id=25]
 [ext_resource path="res://Sprites/Center Dashboard/Home/home.png" type="Texture" id=26]
+[ext_resource path="res://Sprites/Center Dashboard/Knobs/volume-knob-bg.png" type="Texture" id=27]
+[ext_resource path="res://Sprites/Center Dashboard/Knobs/radio-knob-bg.png" type="Texture" id=28]
+[ext_resource path="res://Sprites/Center Dashboard/Knobs/temperature-knob-bg.png" type="Texture" id=29]
+[ext_resource path="res://Sprites/Center Dashboard/Knobs/air-speed-knob-bg.png" type="Texture" id=30]
+[ext_resource path="res://Sprites/Center Dashboard/Knobs/air-flow-knob-bg.png" type="Texture" id=31]
 
 [sub_resource type="DynamicFont" id=1]
 size = 26
@@ -361,10 +366,15 @@ __meta__ = {
 }
 
 [node name="Volume_Control" type="Area2D" parent="."]
-position = Vector2( 75.3579, 257.401 )
+position = Vector2( 72.3579, 257.401 )
 rotation = -2.35619
-scale = Vector2( 0.65, 0.65 )
+scale = Vector2( 0.6, 0.6 )
 script = ExtResource( 12 )
+
+[node name="Background" type="Sprite" parent="Volume_Control"]
+rotation = 2.35619
+scale = Vector2( 1, 1 )
+texture = ExtResource( 27 )
 
 [node name="Label" type="Label" parent="Volume_Control"]
 visible = false
@@ -377,11 +387,6 @@ __meta__ = {
 
 [node name="Sprite" type="Sprite" parent="Volume_Control"]
 texture = ExtResource( 11 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Volume_Control"]
-visible = false
-rotation = 2.35619
-shape = SubResource( 3 )
 
 [node name="CenterContainer" type="CenterContainer" parent="Volume_Control"]
 visible = false
@@ -404,14 +409,24 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Volume_Control"]
+visible = false
+rotation = 2.35619
+shape = SubResource( 3 )
+
 [node name="Radio_Control" type="Area2D" parent="."]
-position = Vector2( 591.358, 257.401 )
+position = Vector2( 595.358, 257.401 )
 rotation = -2.35619
-scale = Vector2( 0.65, 0.65 )
+scale = Vector2( 0.6, 0.6 )
 script = ExtResource( 12 )
 min_rot = -3600
 max_rot = 3600
-sensitivity = 10.0
+sensitivity = 3.0
+
+[node name="Background" type="Sprite" parent="Radio_Control"]
+rotation = 2.35619
+scale = Vector2( 1, 1 )
+texture = ExtResource( 28 )
 
 [node name="Label" type="Label" parent="Radio_Control"]
 visible = false
@@ -454,10 +469,15 @@ __meta__ = {
 }
 
 [node name="Air_Temp" type="Area2D" parent="."]
-position = Vector2( 113.892, 506.511 )
+position = Vector2( 153.892, 506.511 )
 rotation = -2.35619
 scale = Vector2( 1.125, 1.125 )
 script = ExtResource( 12 )
+start_rot = 135
+
+[node name="Background" type="Sprite" parent="Air_Temp"]
+rotation = 2.35619
+texture = ExtResource( 29 )
 
 [node name="Label" type="Label" parent="Air_Temp"]
 visible = false
@@ -500,10 +520,15 @@ __meta__ = {
 }
 
 [node name="Air_Flow" type="Area2D" parent="."]
-position = Vector2( 332.435, 515.511 )
+position = Vector2( 330.766, 521.515 )
 rotation = -2.35619
-scale = Vector2( 0.625, 0.625 )
+scale = Vector2( 0.803818, 0.803818 )
 script = ExtResource( 12 )
+
+[node name="Background" type="Sprite" parent="Air_Flow"]
+rotation = 2.35619
+scale = Vector2( 1.07891, 1.07891 )
+texture = ExtResource( 31 )
 
 [node name="Label" type="Label" parent="Air_Flow"]
 visible = false
@@ -546,10 +571,14 @@ __meta__ = {
 }
 
 [node name="Air_Speed" type="Area2D" parent="."]
-position = Vector2( 545.892, 506.511 )
+position = Vector2( 505.892, 506.511 )
 rotation = -2.35619
 scale = Vector2( 1.125, 1.125 )
 script = ExtResource( 12 )
+
+[node name="Background" type="Sprite" parent="Air_Speed"]
+rotation = 2.35619
+texture = ExtResource( 30 )
 
 [node name="Label" type="Label" parent="Air_Speed"]
 visible = false
@@ -563,6 +592,7 @@ __meta__ = {
 }
 
 [node name="Sprite" type="Sprite" parent="Air_Speed"]
+position = Vector2( 0.419556, -0.419495 )
 texture = ExtResource( 11 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Air_Speed"]
