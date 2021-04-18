@@ -5,6 +5,7 @@ extends Node2D
 # var a = 2
 # var b = "text"
 
+signal tire_pressure_toggled
 
 # Called when the node enters the scene tree for the first time.
 func _ready():

@@ -51,9 +51,14 @@ func _process(delta):
 	
 	get_tree().get_root().find_node("MPH_Label",true,false).text = str(round(floor(abs(speed)))) + "mph"
 	var dial = get_node(@"../../placeholdercircle/Parent_Dial/Dial")
+	var rpmdial = get_node(@"../../placeholderrpm/Parent_Dial/Dial")
 	# print(4.5 * speed/280)
 #	dial.rotate((4.5 * speed/280) - dial.rotation)
 	dial.rotation_degrees = speed
+	if((((speed * 44)/1000) * 35) > 273):
+		rpmdial.rotation_degrees = 274
+	else:
+		rpmdial.rotation_degrees = ((speed * 44)/1000) * 35
 	# print(dial.rotation)
 
 

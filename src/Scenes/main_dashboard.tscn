@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://Sprites/Center Dashboard/placeholdercircle.png" type="Texture" id=1]
 [ext_resource path="res://Sprites/Center Dashboard/Dial.png" type="Texture" id=2]
@@ -13,6 +13,8 @@
 [ext_resource path="res://Sprites/alert-icons/low-fuel.png" type="Texture" id=11]
 [ext_resource path="res://Sprites/alert-icons/low-beam.png" type="Texture" id=12]
 [ext_resource path="res://Scripts/Main Dashboard/Alerts.gd" type="Script" id=13]
+[ext_resource path="res://Sprites/Center Dashboard/placeholderrpm.png" type="Texture" id=14]
+[ext_resource path="res://Sprites/Center Dashboard/temp.png" type="Texture" id=15]
 
 [sub_resource type="DynamicFont" id=1]
 size = 120
@@ -40,30 +42,33 @@ centered = false
 offset = Vector2( -194, -7.843 )
 
 [node name="placeholderrpm" type="Sprite" parent="."]
-position = Vector2( 184, 200 )
+position = Vector2( 184, 199.159 )
 scale = Vector2( 0.477981, 0.477981 )
-texture = ExtResource( 1 )
+texture = ExtResource( 14 )
 
 [node name="Parent_Dial" type="Node2D" parent="placeholderrpm"]
 position = Vector2( -2.09216, -6.27643 )
-rotation = -0.785398
+rotation = -0.872665
 
 [node name="Dial" type="Sprite" parent="placeholderrpm/Parent_Dial"]
 position = Vector2( 0, 1.42534 )
+rotation = 1.77849
 texture = ExtResource( 2 )
 centered = false
 offset = Vector2( -194, -7.843 )
 
 [node name="placeholdertemp" type="Sprite" parent="placeholderrpm"]
-position = Vector2( -6.27637, 167.371 )
-scale = Vector2( 0.194975, 0.194975 )
-texture = ExtResource( 1 )
+position = Vector2( 8.80249, 166.318 )
+scale = Vector2( 0.384182, 0.384182 )
+texture = ExtResource( 15 )
 
 [node name="Parent_Dial" type="Node2D" parent="placeholderrpm/placeholdertemp"]
+visible = false
 position = Vector2( -2.09216, -6.27643 )
 rotation = -0.785398
 
 [node name="Dial" type="Sprite" parent="placeholderrpm/placeholdertemp/Parent_Dial"]
+visible = false
 position = Vector2( 0, 1.42534 )
 texture = ExtResource( 2 )
 centered = false
