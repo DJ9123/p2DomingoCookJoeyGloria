@@ -136,7 +136,7 @@
 
 
 ### Design for dashboard
-<!-- Add sketch here -->
+![Dashboard design](/assets/design.png)
 
 #### Need the following on main dashboard:
 - Speedometer and tachometer
@@ -155,4 +155,4 @@
  - Air controls
 
 ### Video presentation
-<!-- Add link here -->
+https://www.youtube.com/watch?v=WwX0nfMmIXg
