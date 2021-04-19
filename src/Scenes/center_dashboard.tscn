@@ -1,4 +1,4 @@
-[gd_scene load_steps=67 format=2]
+[gd_scene load_steps=70 format=2]
 
 [ext_resource path="res://Scripts/Center Dashboard/dash-button.gd" type="Script" id=1]
 [ext_resource path="res://Sprites/screen-border.png" type="Texture" id=2]
@@ -39,6 +39,9 @@
 [ext_resource path="res://Sprites/Center Dashboard/Radio/radio-mode.png" type="Texture" id=37]
 [ext_resource path="res://Sprites/Center Dashboard/Radio/radio-mode-pressed.png" type="Texture" id=38]
 [ext_resource path="res://Sprites/Center Dashboard/Radio/radio-preset-pressed.png" type="Texture" id=39]
+[ext_resource path="res://StyleBox/blue_normal.tres" type="StyleBox" id=40]
+[ext_resource path="res://StyleBox/blue_hover.tres" type="StyleBox" id=41]
+[ext_resource path="res://StyleBox/blue_pressed.tres" type="StyleBox" id=42]
 
 [sub_resource type="DynamicFont" id=1]
 size = 26
@@ -1496,8 +1499,125 @@ visible = false
 position = Vector2( 110.253, 34.0091 )
 
 [node name="Sprite" type="Sprite" parent="Settings_Menu"]
+visible = false
 position = Vector2( 223.288, 156.025 )
 texture = ExtResource( 24 )
+
+[node name="Label" type="Label" parent="Settings_Menu"]
+margin_left = 200.844
+margin_top = 33.5183
+margin_right = 251.844
+margin_bottom = 47.5183
+text = "Settings"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Control" type="Control" parent="Settings_Menu"]
+margin_left = 6.0
+margin_top = 50.0
+margin_right = 443.0
+margin_bottom = 289.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Settings_Menu/Control"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -199.5
+margin_top = -109.5
+margin_right = 200.5
+margin_bottom = 119.5
+custom_constants/separation = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="Settings_Menu/Control/VBoxContainer"]
+margin_right = 400.0
+margin_bottom = 45.0
+rect_min_size = Vector2( 400, 45 )
+custom_styles/hover = ExtResource( 41 )
+custom_styles/pressed = ExtResource( 42 )
+custom_styles/normal = ExtResource( 40 )
+
+[node name="Label" type="Label" parent="Settings_Menu/Control/VBoxContainer/Button"]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_left = 7.0
+margin_top = -7.0
+margin_right = 70.0
+margin_bottom = 7.0
+text = "Bluetooth"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button2" type="Button" parent="Settings_Menu/Control/VBoxContainer"]
+margin_top = 46.0
+margin_right = 400.0
+margin_bottom = 91.0
+rect_min_size = Vector2( 400, 45 )
+custom_styles/hover = ExtResource( 41 )
+custom_styles/pressed = ExtResource( 42 )
+custom_styles/normal = ExtResource( 40 )
+
+[node name="Label" type="Label" parent="Settings_Menu/Control/VBoxContainer/Button2"]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_left = 7.0
+margin_top = -7.0
+margin_right = 70.0
+margin_bottom = 7.0
+text = "Speakers"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button3" type="Button" parent="Settings_Menu/Control/VBoxContainer"]
+margin_top = 92.0
+margin_right = 400.0
+margin_bottom = 137.0
+rect_min_size = Vector2( 400, 45 )
+custom_styles/hover = ExtResource( 41 )
+custom_styles/pressed = ExtResource( 42 )
+custom_styles/normal = ExtResource( 40 )
+
+[node name="Label" type="Label" parent="Settings_Menu/Control/VBoxContainer/Button3"]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_left = 7.0
+margin_top = -7.0
+margin_right = 70.0
+margin_bottom = 7.0
+text = "Clock"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button4" type="Button" parent="Settings_Menu/Control/VBoxContainer"]
+margin_top = 138.0
+margin_right = 400.0
+margin_bottom = 183.0
+rect_min_size = Vector2( 400, 45 )
+custom_styles/hover = ExtResource( 41 )
+custom_styles/pressed = ExtResource( 42 )
+custom_styles/normal = ExtResource( 40 )
+
+[node name="Label" type="Label" parent="Settings_Menu/Control/VBoxContainer/Button4"]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_left = 7.0
+margin_top = -7.0
+margin_right = 70.0
+margin_bottom = 7.0
+text = "Info"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Home_Menu" type="Node2D" parent="."]
 position = Vector2( 110.253, 34.0091 )
@@ -1561,17 +1681,17 @@ text = "00:00"
 __meta__ = {
 "_edit_use_anchors_": false
 }
-[connection signal="activated" from="Radio" to="Music_Menu" method="_on_Radio_activated"]
 [connection signal="activated" from="Radio" to="Radio_Menu" method="_on_Radio_activated"]
+[connection signal="activated" from="Radio" to="Music_Menu" method="_on_Radio_activated"]
 [connection signal="pressed" from="Radio" to="Radio" method="_on_Button_pressed"]
-[connection signal="activated" from="Music" to="Music_Menu" method="_on_Music_activated"]
 [connection signal="activated" from="Music" to="Radio_Menu" method="_on_Music_activated"]
+[connection signal="activated" from="Music" to="Music_Menu" method="_on_Music_activated"]
 [connection signal="pressed" from="Music" to="Music" method="_on_Button_pressed"]
-[connection signal="activated" from="Previous" to="Music_Menu" method="_on_Previous_activated"]
 [connection signal="activated" from="Previous" to="Radio_Menu" method="_on_Previous_activated"]
+[connection signal="activated" from="Previous" to="Music_Menu" method="_on_Previous_activated"]
 [connection signal="pressed" from="Previous" to="Previous" method="_on_Button_pressed"]
-[connection signal="activated" from="Next" to="Music_Menu" method="_on_Next_activated"]
 [connection signal="activated" from="Next" to="Radio_Menu" method="_on_Next_activated"]
+[connection signal="activated" from="Next" to="Music_Menu" method="_on_Next_activated"]
 [connection signal="pressed" from="Next" to="Next" method="_on_Button_pressed"]
 [connection signal="pressed" from="Phone" to="Phone" method="_on_Button_pressed"]
 [connection signal="pressed" from="Map" to="Map" method="_on_Button_pressed"]
