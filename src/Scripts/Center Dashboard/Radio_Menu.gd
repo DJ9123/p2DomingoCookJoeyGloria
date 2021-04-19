@@ -16,6 +16,10 @@ var amPresets = [
 	"1340",
 ]
 
+var presetList = []
+var presetIndex = 0
+var radio_activated = false
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	_on_FM_activated(null)
@@ -83,6 +87,7 @@ func _on_AM_activated(_button):
 	$Preset1.label_text = amPresets[0]
 	$Preset2.label_text = amPresets[1]
 	$Preset3.label_text = amPresets[2]
+	presetList = Array(amPresets)
 	updateStationText()
 
 
@@ -92,8 +97,28 @@ func _on_FM_activated(_button):
 	$Preset1.label_text = fmPresets[0]
 	$Preset2.label_text = fmPresets[1]
 	$Preset3.label_text = fmPresets[2]
+	presetList = Array(fmPresets)
 	updateStationText()
 
 
-func _on_Previous_activated():
-	pass # Replace with function body.
+func _on_Previous_activated(_button):
+	if radio_activated:
+		presetIndex -= 1
+		station = round(float(presetList[presetIndex % presetList.size()]) * 10)/10
+		updateStationText()
+
+
+func _on_Next_activated(_button):
+	if radio_activated:
+		presetIndex += 1
+		station = round(float(presetList[presetIndex % presetList.size()]) * 10)/10
+		updateStationText()
+
+
+func _on_Radio_activated(_button):
+	if not radio_activated:
+		radio_activated = true
+
+
+func _on_Music_activated(_button):
+	radio_activated = false

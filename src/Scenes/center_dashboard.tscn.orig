@@ -1,4 +1,8 @@
-[gd_scene load_steps=67 format=2]
+<<<<<<< HEAD
+[gd_scene load_steps=38 format=2]
+=======
+[gd_scene load_steps=58 format=2]
+>>>>>>> 78419c537c2d1e28378443511b1b945484f0c3d0
 
 [ext_resource path="res://Scripts/Center Dashboard/dash-button.gd" type="Script" id=1]
 [ext_resource path="res://Sprites/screen-border.png" type="Texture" id=2]
@@ -26,19 +30,18 @@
 [ext_resource path="res://Sprites/Center Dashboard/Settings/home.png" type="Texture" id=24]
 [ext_resource path="res://Sprites/Center Dashboard/Map/home.png" type="Texture" id=25]
 [ext_resource path="res://Sprites/Center Dashboard/Home/home.png" type="Texture" id=26]
+<<<<<<< HEAD
+[ext_resource path="res://Sprites/Center Dashboard/Knobs/volume-knob-bg.png" type="Texture" id=27]
+[ext_resource path="res://Sprites/Center Dashboard/Knobs/radio-knob-bg.png" type="Texture" id=28]
+[ext_resource path="res://Sprites/Center Dashboard/Knobs/temperature-knob-bg.png" type="Texture" id=29]
+[ext_resource path="res://Sprites/Center Dashboard/Knobs/air-speed-knob-bg.png" type="Texture" id=30]
+[ext_resource path="res://Sprites/Center Dashboard/Knobs/air-flow-knob-bg.png" type="Texture" id=31]
+=======
 [ext_resource path="res://Scripts/Center Dashboard/Phone_Menu.gd" type="Script" id=27]
 [ext_resource path="res://Scripts/Center Dashboard/Map_Menu.gd" type="Script" id=28]
-[ext_resource path="res://Sprites/Center Dashboard/Radio/radio-preset.png" type="Texture" id=29]
 [ext_resource path="res://StyleBox/rounded_blue_hover.tres" type="StyleBox" id=30]
 [ext_resource path="res://StyleBox/rounded_blue_clicked.tres" type="StyleBox" id=31]
-[ext_resource path="res://Sprites/Center Dashboard/Knobs/air-flow-knob-bg.png" type="Texture" id=32]
-[ext_resource path="res://Sprites/Center Dashboard/Knobs/volume-knob-bg.png" type="Texture" id=33]
-[ext_resource path="res://Sprites/Center Dashboard/Knobs/radio-knob-bg.png" type="Texture" id=34]
-[ext_resource path="res://Sprites/Center Dashboard/Knobs/temperature-knob-bg.png" type="Texture" id=35]
-[ext_resource path="res://Sprites/Center Dashboard/Knobs/air-speed-knob-bg.png" type="Texture" id=36]
-[ext_resource path="res://Sprites/Center Dashboard/Radio/radio-mode.png" type="Texture" id=37]
-[ext_resource path="res://Sprites/Center Dashboard/Radio/radio-mode-pressed.png" type="Texture" id=38]
-[ext_resource path="res://Sprites/Center Dashboard/Radio/radio-preset-pressed.png" type="Texture" id=39]
+>>>>>>> 78419c537c2d1e28378443511b1b945484f0c3d0
 
 [sub_resource type="DynamicFont" id=1]
 size = 26
@@ -509,7 +512,8 @@ script = ExtResource( 12 )
 
 [node name="Background" type="Sprite" parent="Volume_Control"]
 rotation = 2.35619
-texture = ExtResource( 33 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 27 )
 
 [node name="Label" type="Label" parent="Volume_Control"]
 visible = false
@@ -560,7 +564,8 @@ sensitivity = 3.0
 
 [node name="Background" type="Sprite" parent="Radio_Control"]
 rotation = 2.35619
-texture = ExtResource( 34 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 28 )
 
 [node name="Label" type="Label" parent="Radio_Control"]
 visible = false
@@ -611,7 +616,7 @@ start_rot = 135
 
 [node name="Background" type="Sprite" parent="Air_Temp"]
 rotation = 2.35619
-texture = ExtResource( 35 )
+texture = ExtResource( 29 )
 
 [node name="Label" type="Label" parent="Air_Temp"]
 visible = false
@@ -662,7 +667,7 @@ script = ExtResource( 12 )
 [node name="Background" type="Sprite" parent="Air_Flow"]
 rotation = 2.35619
 scale = Vector2( 1.07891, 1.07891 )
-texture = ExtResource( 32 )
+texture = ExtResource( 31 )
 
 [node name="Label" type="Label" parent="Air_Flow"]
 visible = false
@@ -712,7 +717,7 @@ script = ExtResource( 12 )
 
 [node name="Background" type="Sprite" parent="Air_Speed"]
 rotation = 2.35619
-texture = ExtResource( 36 )
+texture = ExtResource( 30 )
 
 [node name="Label" type="Label" parent="Air_Speed"]
 visible = false
@@ -793,6 +798,7 @@ __meta__ = {
 }
 
 [node name="Radio_Menu" type="Node2D" parent="."]
+visible = false
 position = Vector2( 333.499, 180.433 )
 script = ExtResource( 19 )
 
@@ -807,8 +813,8 @@ margin_right = -89.1295
 margin_bottom = -43.4675
 rect_scale = Vector2( 0.75, 0.75 )
 rect_pivot_offset = Vector2( -126.59, -80.8903 )
-texture_normal = ExtResource( 29 )
-texture_pressed = ExtResource( 39 )
+texture_normal = ExtResource( 4 )
+texture_pressed = ExtResource( 5 )
 expand = true
 script = ExtResource( 1 )
 __meta__ = {
@@ -844,8 +850,8 @@ margin_right = -88.8596
 margin_bottom = 3.16637
 rect_scale = Vector2( 0.75, 0.75 )
 rect_pivot_offset = Vector2( -126.59, -80.8903 )
-texture_normal = ExtResource( 29 )
-texture_pressed = ExtResource( 39 )
+texture_normal = ExtResource( 4 )
+texture_pressed = ExtResource( 5 )
 expand = true
 script = ExtResource( 1 )
 __meta__ = {
@@ -881,8 +887,8 @@ margin_right = -88.9356
 margin_bottom = 50.7178
 rect_scale = Vector2( 0.75, 0.75 )
 rect_pivot_offset = Vector2( -126.59, -80.8903 )
-texture_normal = ExtResource( 29 )
-texture_pressed = ExtResource( 39 )
+texture_normal = ExtResource( 4 )
+texture_pressed = ExtResource( 5 )
 expand = true
 script = ExtResource( 1 )
 __meta__ = {
@@ -918,8 +924,8 @@ margin_right = 52.4946
 margin_bottom = 175.781
 rect_scale = Vector2( 0.75, 0.75 )
 rect_pivot_offset = Vector2( -126.59, -80.8903 )
-texture_normal = ExtResource( 37 )
-texture_pressed = ExtResource( 38 )
+texture_normal = ExtResource( 4 )
+texture_pressed = ExtResource( 5 )
 expand = true
 script = ExtResource( 1 )
 __meta__ = {
@@ -955,8 +961,8 @@ margin_right = 123.959
 margin_bottom = 175.938
 rect_scale = Vector2( 0.75, 0.75 )
 rect_pivot_offset = Vector2( -126.59, -80.8903 )
-texture_normal = ExtResource( 37 )
-texture_pressed = ExtResource( 38 )
+texture_normal = ExtResource( 4 )
+texture_pressed = ExtResource( 5 )
 expand = true
 script = ExtResource( 1 )
 __meta__ = {
@@ -1210,7 +1216,6 @@ __meta__ = {
 }
 
 [node name="Phone_Menu" type="Node2D" parent="."]
-visible = false
 position = Vector2( 333.541, 190.034 )
 script = ExtResource( 27 )
 
@@ -1565,17 +1570,11 @@ text = "00:00"
 __meta__ = {
 "_edit_use_anchors_": false
 }
-[connection signal="activated" from="Radio" to="Music_Menu" method="_on_Radio_activated"]
-[connection signal="activated" from="Radio" to="Radio_Menu" method="_on_Radio_activated"]
 [connection signal="pressed" from="Radio" to="Radio" method="_on_Button_pressed"]
-[connection signal="activated" from="Music" to="Music_Menu" method="_on_Music_activated"]
-[connection signal="activated" from="Music" to="Radio_Menu" method="_on_Music_activated"]
 [connection signal="pressed" from="Music" to="Music" method="_on_Button_pressed"]
 [connection signal="activated" from="Previous" to="Music_Menu" method="_on_Previous_activated"]
-[connection signal="activated" from="Previous" to="Radio_Menu" method="_on_Previous_activated"]
 [connection signal="pressed" from="Previous" to="Previous" method="_on_Button_pressed"]
 [connection signal="activated" from="Next" to="Music_Menu" method="_on_Next_activated"]
-[connection signal="activated" from="Next" to="Radio_Menu" method="_on_Next_activated"]
 [connection signal="pressed" from="Next" to="Next" method="_on_Button_pressed"]
 [connection signal="pressed" from="Phone" to="Phone" method="_on_Button_pressed"]
 [connection signal="pressed" from="Map" to="Map" method="_on_Button_pressed"]

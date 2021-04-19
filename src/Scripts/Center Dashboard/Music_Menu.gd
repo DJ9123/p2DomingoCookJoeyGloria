@@ -118,7 +118,8 @@ var nowPlayingList = []
 var nowPlaying = {}
 
 var elapsed = 0
-var paused = false
+var paused = true
+var music_activated = false
 
 onready var lighter = $Lighter
 onready var darker = $Darker
@@ -139,6 +140,7 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
+#	print(paused)
 	if not paused:
 		elapsed += delta
 		update_progress()
@@ -150,10 +152,13 @@ func update_progress():
 		_on_Next_activated(null)
 
 
-func updateNowPlaying():
-	print("nowPlaying: ", nowPlaying)
+func reset():
 	elapsed = 0
 	paused = false
+
+
+func updateNowPlaying():
+	print("nowPlaying: ", nowPlaying)
 	lighter.color = Color(nowPlaying.lighter)
 	darker.color = Color(nowPlaying.darker)
 	sprite.texture = spriteTextures[nowPlayingIndex % nowPlayingList.size()]
@@ -163,15 +168,19 @@ func updateNowPlaying():
 
 
 func _on_Previous_activated(_button):
-	nowPlayingIndex -= 1
-	nowPlaying = nowPlayingList[nowPlayingIndex % nowPlayingList.size()]
-	updateNowPlaying()
+	if music_activated:
+		nowPlayingIndex -= 1
+		nowPlaying = nowPlayingList[nowPlayingIndex % nowPlayingList.size()]
+		reset()
+		updateNowPlaying()
 
 
 func _on_Next_activated(_button):
-	nowPlayingIndex += 1	
-	nowPlaying = nowPlayingList[nowPlayingIndex % nowPlayingList.size()]
-	updateNowPlaying()
+	if music_activated:
+		nowPlayingIndex += 1	
+		nowPlaying = nowPlayingList[nowPlayingIndex % nowPlayingList.size()]
+		reset()
+		updateNowPlaying()
 
 
 func _on_Rewind_activated(_button):
@@ -194,3 +203,14 @@ func _on_Forward_activated(_button):
 	if elapsed > nowPlayingLength:
 		_on_Next_activated(null)
 	update_progress()
+
+
+func _on_Music_activated(_button):
+	if not music_activated:
+		paused = false
+		music_activated = true
+
+
+func _on_Radio_activated(_button):
+	paused = true
+	music_activated = false
