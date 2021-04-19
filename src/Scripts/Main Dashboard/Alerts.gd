@@ -9,8 +9,13 @@ signal tire_pressure_toggled
 signal temperature_toggled
 signal all_alerts_toggled
 
+onready var healthbar = $"../Middle-Screen/MPH/TextureProgress"
+
 var normal = load("res://Sprites/Center Dashboard/tempnormal.png") 
 var hot = load("res://Sprites/Center Dashboard/temphot.png") 
+
+var red = load("res://Sprites/Center Dashboard/bar_red.png") 
+var green = load("res://Sprites/Center Dashboard/bar_green.png") 
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -45,9 +50,14 @@ func _on_Show_Alerts_toggled(button_pressed):
 	if(button_pressed):
 		for n in self.get_children():
 			n.visible = true
+		healthbar.texture_progress = red
+		healthbar.value = 10
+		
 	else:
 		for n in self.get_children():
 			n.visible = false
+		healthbar.texture_progress = green
+		healthbar.value = 100
 		$"../Control/Tire Pressure".pressed = false
 		$"../Control/Set Hot".pressed = false
 		

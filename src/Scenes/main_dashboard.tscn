@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=2]
+[gd_scene load_steps=25 format=2]
 
 [ext_resource path="res://Sprites/Center Dashboard/placeholdercircle.png" type="Texture" id=1]
 [ext_resource path="res://Sprites/Center Dashboard/Dial.png" type="Texture" id=2]
@@ -22,15 +22,35 @@
 size = 120
 font_data = ExtResource( 5 )
 
+[sub_resource type="DynamicFont" id=7]
+size = 45
+font_data = ExtResource( 5 )
+
 [sub_resource type="DynamicFont" id=2]
 size = 55
 font_data = ExtResource( 5 )
 
-[sub_resource type="DynamicFont" id=3]
+[sub_resource type="StyleBoxFlat" id=3]
+bg_color = Color( 0.6, 0.6, 0.6, 0 )
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color( 1, 1, 1, 1 )
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="DynamicFont" id=4]
+size = 88
+font_data = ExtResource( 5 )
+
+[sub_resource type="DynamicFont" id=5]
 size = 25
 font_data = ExtResource( 5 )
 
-[sub_resource type="DynamicFont" id=4]
+[sub_resource type="DynamicFont" id=6]
 size = 26
 font_data = ExtResource( 5 )
 
@@ -105,12 +125,12 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -78.0
-margin_top = -633.0
-margin_right = -19.0
-margin_bottom = -606.0
-custom_fonts/font = ExtResource( 4 )
-text = "40F"
+margin_left = -116.995
+margin_top = -634.0
+margin_right = -8.99524
+margin_bottom = -578.0
+custom_fonts/font = SubResource( 7 )
+text = "40°F"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -131,17 +151,27 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Gear" type="Label" parent="Middle-Screen"]
-anchor_left = 0.497087
+[node name="Gear" type="Panel" parent="Middle-Screen"]
+margin_left = -250.0
+margin_top = -311.0
+margin_right = -150.0
+margin_bottom = -211.0
+custom_styles/panel = SubResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Middle-Screen/Gear"]
+anchor_left = 0.5
 anchor_top = 0.5
-anchor_right = 0.497087
+anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -497.491
-margin_top = -633.184
-margin_right = -322.491
-margin_bottom = -606.184
-custom_fonts/font = ExtResource( 4 )
-text = "Driver mode"
+margin_left = -34.0
+margin_top = -54.0
+margin_right = 34.0
+margin_bottom = 54.0
+custom_fonts/font = SubResource( 4 )
+text = "D"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -175,7 +205,7 @@ margin_left = -117.253
 margin_top = 499.553
 margin_right = -101.253
 margin_bottom = 531.553
-custom_fonts/font = SubResource( 3 )
+custom_fonts/font = SubResource( 5 )
 text = "E"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -186,7 +216,7 @@ margin_left = -112.975
 margin_top = 549.939
 margin_right = -96.9752
 margin_bottom = 581.939
-custom_fonts/font = SubResource( 3 )
+custom_fonts/font = SubResource( 5 )
 text = "-"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -197,7 +227,7 @@ margin_left = 311.027
 margin_top = 498.016
 margin_right = 326.027
 margin_bottom = 531.016
-custom_fonts/font = SubResource( 4 )
+custom_fonts/font = SubResource( 6 )
 text = "F"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -208,7 +238,7 @@ margin_left = 309.126
 margin_top = 548.877
 margin_right = 330.126
 margin_bottom = 581.877
-custom_fonts/font = SubResource( 4 )
+custom_fonts/font = SubResource( 6 )
 text = "+"
 __meta__ = {
 "_edit_use_anchors_": false
