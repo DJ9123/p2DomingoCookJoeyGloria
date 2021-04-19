@@ -1222,7 +1222,6 @@ __meta__ = {
 }
 
 [node name="Phone_Menu" type="Node2D" parent="."]
-visible = false
 position = Vector2( 333.541, 190.034 )
 script = ExtResource( 27 )
 
@@ -1247,8 +1246,8 @@ __meta__ = {
 [node name="Label" type="Label" parent="Phone_Menu/Control/Panel"]
 anchor_left = 0.5
 anchor_right = 0.5
-margin_left = -44.896
-margin_right = 83.104
+margin_left = -66.9779
+margin_right = 61.0221
 margin_bottom = 35.0
 custom_fonts/font = SubResource( 9 )
 text = "Recents"
@@ -1285,12 +1284,12 @@ __meta__ = {
 [node name="Label" type="Label" parent="Phone_Menu/Control/Panel/Content/One"]
 anchor_top = 0.5
 anchor_bottom = 0.5
-margin_left = 36.2366
+margin_left = 20.237
 margin_top = -14.0409
-margin_right = 336.237
+margin_right = 320.237
 margin_bottom = 13.9591
 custom_fonts/font = ExtResource( 44 )
-text = "Mom                   7:03pm"
+text = "Mom  - outgoing - 7:03pm"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -1305,8 +1304,8 @@ margin_left = -163.5
 margin_top = -14.0
 margin_right = 163.5
 margin_bottom = 14.0
-custom_fonts/font = ExtResource( 43 )
-text = "Mom                555-555-555"
+custom_fonts/font = ExtResource( 44 )
+text = "Mom               555-555-555 "
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -1332,12 +1331,12 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -129.263
+margin_left = -145.263
 margin_top = -14.0
-margin_right = 170.737
+margin_right = 154.737
 margin_bottom = 14.0
-custom_fonts/font = ExtResource( 43 )
-text = "Mom                   7:03pm"
+custom_fonts/font = ExtResource( 44 )
+text = "Mom  -  missed   - 7:02pm"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -1352,7 +1351,7 @@ margin_left = -163.5
 margin_top = -14.0
 margin_right = 163.5
 margin_bottom = 14.0
-custom_fonts/font = ExtResource( 43 )
+custom_fonts/font = ExtResource( 44 )
 text = "Dad                555-555-555"
 
 [node name="Three" type="Button" parent="Phone_Menu/Control/Panel/Content"]
@@ -1376,12 +1375,12 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -129.263
+margin_left = -145.263
 margin_top = -13.9899
-margin_right = 170.737
+margin_right = 154.737
 margin_bottom = 14.0101
-custom_fonts/font = ExtResource( 43 )
-text = "Mom                   7:03pm"
+custom_fonts/font = ExtResource( 44 )
+text = "Mom  -  missed   - 7:01pm"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -1396,7 +1395,7 @@ margin_left = -163.5
 margin_top = -14.0
 margin_right = 163.5
 margin_bottom = 14.0
-custom_fonts/font = ExtResource( 43 )
+custom_fonts/font = ExtResource( 44 )
 text = "Dog                555-555-555"
 
 [node name="Recents" type="Button" parent="Phone_Menu/Control/Panel"]
@@ -1428,6 +1427,7 @@ visible = false
 texture = ExtResource( 23 )
 
 [node name="Map_Menu" type="Node2D" parent="."]
+visible = false
 position = Vector2( 110.253, 34.0091 )
 script = ExtResource( 28 )
 
@@ -1890,17 +1890,17 @@ text = "00:00"
 __meta__ = {
 "_edit_use_anchors_": false
 }
-[connection signal="activated" from="Radio" to="Music_Menu" method="_on_Radio_activated"]
 [connection signal="activated" from="Radio" to="Radio_Menu" method="_on_Radio_activated"]
+[connection signal="activated" from="Radio" to="Music_Menu" method="_on_Radio_activated"]
 [connection signal="pressed" from="Radio" to="Radio" method="_on_Button_pressed"]
-[connection signal="activated" from="Music" to="Music_Menu" method="_on_Music_activated"]
 [connection signal="activated" from="Music" to="Radio_Menu" method="_on_Music_activated"]
+[connection signal="activated" from="Music" to="Music_Menu" method="_on_Music_activated"]
 [connection signal="pressed" from="Music" to="Music" method="_on_Button_pressed"]
-[connection signal="activated" from="Previous" to="Music_Menu" method="_on_Previous_activated"]
 [connection signal="activated" from="Previous" to="Radio_Menu" method="_on_Previous_activated"]
+[connection signal="activated" from="Previous" to="Music_Menu" method="_on_Previous_activated"]
 [connection signal="pressed" from="Previous" to="Previous" method="_on_Button_pressed"]
-[connection signal="activated" from="Next" to="Music_Menu" method="_on_Next_activated"]
 [connection signal="activated" from="Next" to="Radio_Menu" method="_on_Next_activated"]
+[connection signal="activated" from="Next" to="Music_Menu" method="_on_Next_activated"]
 [connection signal="pressed" from="Next" to="Next" method="_on_Button_pressed"]
 [connection signal="pressed" from="Phone" to="Phone" method="_on_Button_pressed"]
 [connection signal="pressed" from="Map" to="Map" method="_on_Button_pressed"]
