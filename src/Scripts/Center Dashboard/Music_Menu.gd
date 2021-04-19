@@ -81,13 +81,6 @@ var songs = [
 		"lighter": "8B8F8B",
 		"darker": "58a6a2",
 	}, {
-		"filename": "lullaby-in-the-peaceful-light.png",
-		"title": "Lullaby in the Peaceful Light",
-		"artist": "Masakatsu Takagi",
-		"album": "Wolf Children",
-		"lighter": "8CADB3",
-		"darker": "3b613b",
-	}, {
 		"filename": "fishy-on-me.png",
 		"title": "Fishy On Me",
 		"artist": "Tiko",
@@ -108,7 +101,6 @@ var spriteTextures = [
 	preload("res://Sprites/Center Dashboard/Music/eugene.png"),
 	preload("res://Sprites/Center Dashboard/Music/sayonara-wild-heart.png"),
 	preload("res://Sprites/Center Dashboard/Music/shrike.png"),
-	preload("res://Sprites/Center Dashboard/Music/lullaby-in-the-peaceful-light.png"),
 	preload("res://Sprites/Center Dashboard/Music/fishy-on-me.png"),
 ]
 

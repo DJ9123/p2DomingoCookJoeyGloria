@@ -194,9 +194,12 @@ border_width_right = 5
 border_width_bottom = 5
 border_color = Color( 0.278431, 0.384314, 1, 1 )
 
-[node name="Center" type="Node2D"]
-position = Vector2( 0, -1 )
+[node name="Center" type="Control"]
+rect_scale = Vector2( 1.58501, 1.58501 )
 script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Background" type="Sprite" parent="."]
 position = Vector2( 334.905, 342.698 )
@@ -230,10 +233,10 @@ __meta__ = {
 }
 
 [node name="Label" type="Label" parent="Radio/CenterContainer"]
-margin_left = 6.0
-margin_top = 14.0
-margin_right = 82.0
-margin_bottom = 41.0
+margin_left = 8.0
+margin_top = 11.0
+margin_right = 81.0
+margin_bottom = 44.0
 custom_fonts/font = SubResource( 1 )
 text = "Radio"
 __meta__ = {
@@ -267,10 +270,10 @@ __meta__ = {
 }
 
 [node name="Label" type="Label" parent="Music/CenterContainer"]
-margin_left = 7.0
-margin_top = 14.0
+margin_left = 8.0
+margin_top = 11.0
 margin_right = 81.0
-margin_bottom = 41.0
+margin_bottom = 44.0
 custom_fonts/font = SubResource( 1 )
 text = "Music"
 __meta__ = {
@@ -304,10 +307,10 @@ __meta__ = {
 }
 
 [node name="Label" type="Label" parent="Previous/CenterContainer"]
-margin_left = 7.0
-margin_top = 14.0
-margin_right = 37.0
-margin_bottom = 41.0
+margin_left = 6.0
+margin_top = 11.0
+margin_right = 39.0
+margin_bottom = 44.0
 custom_fonts/font = SubResource( 1 )
 text = "<-"
 __meta__ = {
@@ -341,10 +344,10 @@ __meta__ = {
 }
 
 [node name="Label" type="Label" parent="Next/CenterContainer"]
-margin_left = 7.0
-margin_top = 14.0
-margin_right = 37.0
-margin_bottom = 41.0
+margin_left = 6.0
+margin_top = 11.0
+margin_right = 39.0
+margin_bottom = 44.0
 custom_fonts/font = SubResource( 1 )
 text = "->"
 __meta__ = {
@@ -379,10 +382,10 @@ __meta__ = {
 }
 
 [node name="Label" type="Label" parent="Phone/CenterContainer"]
-margin_left = 3.0
-margin_top = 14.0
-margin_right = 84.0
-margin_bottom = 41.0
+margin_left = 4.0
+margin_top = 11.0
+margin_right = 83.0
+margin_bottom = 44.0
 custom_fonts/font = SubResource( 1 )
 text = "Phone"
 __meta__ = {
@@ -418,9 +421,9 @@ __meta__ = {
 
 [node name="Label" type="Label" parent="Map/CenterContainer"]
 margin_left = 17.0
-margin_top = 14.0
+margin_top = 11.0
 margin_right = 71.0
-margin_bottom = 41.0
+margin_bottom = 44.0
 custom_fonts/font = SubResource( 1 )
 text = "Map"
 __meta__ = {
@@ -455,9 +458,10 @@ __meta__ = {
 }
 
 [node name="Label" type="Label" parent="Settings/CenterContainer"]
-margin_top = 17.0
-margin_right = 88.0
-margin_bottom = 39.0
+margin_left = 1.0
+margin_top = 14.0
+margin_right = 87.0
+margin_bottom = 41.0
 custom_fonts/font = SubResource( 2 )
 text = "Settings"
 __meta__ = {
@@ -491,10 +495,10 @@ __meta__ = {
 
 [node name="Label" type="Label" parent="Home/CenterContainer"]
 visible = false
-margin_left = 9.0
-margin_top = 14.0
-margin_right = 80.0
-margin_bottom = 41.0
+margin_left = 6.0
+margin_top = 11.0
+margin_right = 82.0
+margin_bottom = 44.0
 custom_fonts/font = SubResource( 1 )
 text = "Home"
 __meta__ = {
@@ -782,10 +786,10 @@ __meta__ = {
 
 [node name="Label" type="Label" parent="Warning/CenterContainer"]
 visible = false
-margin_left = -11.0
-margin_top = 14.0
-margin_right = 100.0
-margin_bottom = 41.0
+margin_left = -10.0
+margin_top = 11.0
+margin_right = 98.0
+margin_bottom = 44.0
 custom_fonts/font = SubResource( 1 )
 text = "Warning"
 __meta__ = {
@@ -829,9 +833,9 @@ __meta__ = {
 
 [node name="Label" type="Label" parent="Radio_Menu/Preset1/CenterContainer"]
 margin_left = 14.0
-margin_top = 14.0
-margin_right = 75.0
-margin_bottom = 41.0
+margin_top = 11.0
+margin_right = 74.0
+margin_bottom = 44.0
 custom_fonts/font = SubResource( 1 )
 text = "00.0"
 __meta__ = {
@@ -866,9 +870,9 @@ __meta__ = {
 
 [node name="Label" type="Label" parent="Radio_Menu/Preset2/CenterContainer"]
 margin_left = 14.0
-margin_top = 14.0
-margin_right = 75.0
-margin_bottom = 41.0
+margin_top = 11.0
+margin_right = 74.0
+margin_bottom = 44.0
 custom_fonts/font = SubResource( 1 )
 text = "00.0"
 __meta__ = {
@@ -903,9 +907,9 @@ __meta__ = {
 
 [node name="Label" type="Label" parent="Radio_Menu/Preset3/CenterContainer"]
 margin_left = 14.0
-margin_top = 14.0
-margin_right = 75.0
-margin_bottom = 41.0
+margin_top = 11.0
+margin_right = 74.0
+margin_bottom = 44.0
 custom_fonts/font = SubResource( 1 )
 text = "00.0"
 __meta__ = {
@@ -938,10 +942,10 @@ __meta__ = {
 }
 
 [node name="Label" type="Label" parent="Radio_Menu/AM/CenterContainer"]
-margin_left = 23.0
-margin_top = 14.0
-margin_right = 66.0
-margin_bottom = 41.0
+margin_left = 24.0
+margin_top = 11.0
+margin_right = 64.0
+margin_bottom = 44.0
 custom_fonts/font = SubResource( 1 )
 text = "AM"
 __meta__ = {
@@ -974,10 +978,10 @@ __meta__ = {
 }
 
 [node name="Label" type="Label" parent="Radio_Menu/FM/CenterContainer"]
-margin_left = 25.0
-margin_top = 14.0
-margin_right = 64.0
-margin_bottom = 41.0
+margin_left = 26.0
+margin_top = 11.0
+margin_right = 63.0
+margin_bottom = 44.0
 custom_fonts/font = SubResource( 1 )
 text = "FM"
 __meta__ = {
@@ -995,10 +999,10 @@ __meta__ = {
 }
 
 [node name="Station" type="Label" parent="Radio_Menu/CenterContainer"]
-margin_left = 161.0
-margin_top = 63.0
-margin_right = 270.0
-margin_bottom = 109.0
+margin_left = 164.0
+margin_top = 58.0
+margin_right = 267.0
+margin_bottom = 114.0
 custom_fonts/font = SubResource( 4 )
 text = "00.0"
 __meta__ = {
@@ -1006,8 +1010,8 @@ __meta__ = {
 }
 
 [node name="Music_Menu" type="Node2D" parent="."]
-visible = false
-position = Vector2( 110.253, 34.0091 )
+position = Vector2( 110.563, 34.9774 )
+scale = Vector2( 1, 0.992235 )
 script = ExtResource( 20 )
 
 [node name="Lighter" type="ColorRect" parent="Music_Menu"]
@@ -1043,9 +1047,8 @@ __meta__ = {
 }
 
 [node name="Album" type="Label" parent="Music_Menu/Info"]
-margin_top = 8.0
 margin_right = 243.0
-margin_bottom = 23.0
+margin_bottom = 18.0
 custom_fonts/font = SubResource( 5 )
 text = "This is the album"
 autowrap = true
@@ -1054,9 +1057,9 @@ __meta__ = {
 }
 
 [node name="Title" type="Label" parent="Music_Menu/Info"]
-margin_top = 27.0
+margin_top = 22.0
 margin_right = 243.0
-margin_bottom = 132.0
+margin_bottom = 148.0
 custom_fonts/font = SubResource( 6 )
 text = "This is the name of the song"
 autowrap = true
@@ -1065,9 +1068,9 @@ __meta__ = {
 }
 
 [node name="Artist" type="Label" parent="Music_Menu/Info"]
-margin_top = 136.0
+margin_top = 152.0
 margin_right = 243.0
-margin_bottom = 151.0
+margin_bottom = 170.0
 custom_fonts/font = SubResource( 5 )
 text = "This is the artist"
 autowrap = true
@@ -1090,10 +1093,9 @@ __meta__ = {
 }
 
 [node name="Controls" type="HBoxContainer" parent="Music_Menu"]
-margin_left = 0.334061
-margin_top = 220.111
-margin_right = 446.334
-margin_bottom = 293.111
+margin_top = 236.0
+margin_right = 446.0
+margin_bottom = 293.0
 rect_min_size = Vector2( 100, 0 )
 alignment = 1
 __meta__ = {
@@ -1101,13 +1103,13 @@ __meta__ = {
 }
 
 [node name="Rewind" type="TextureButton" parent="Music_Menu/Controls"]
-margin_left = 68.0
-margin_right = 168.0
-margin_bottom = 73.0
+margin_left = 69.0
+margin_right = 169.0
+margin_bottom = 57.0
 rect_min_size = Vector2( 100, 0 )
 rect_pivot_offset = Vector2( -126.59, -80.8903 )
-texture_normal = ExtResource( 4 )
-texture_pressed = ExtResource( 5 )
+texture_normal = ExtResource( 37 )
+texture_pressed = ExtResource( 38 )
 expand = true
 script = ExtResource( 1 )
 __meta__ = {
@@ -1118,7 +1120,7 @@ __meta__ = {
 margin_left = 5.0
 margin_right = 94.0
 margin_bottom = 73.0
-rect_min_size = Vector2( 0, 73 )
+rect_min_size = Vector2( 0, 45.185 )
 rect_clip_content = true
 mouse_filter = 2
 __meta__ = {
@@ -1126,10 +1128,10 @@ __meta__ = {
 }
 
 [node name="Label" type="Label" parent="Music_Menu/Controls/Rewind/CenterContainer"]
-margin_left = 20.0
-margin_top = 23.0
-margin_right = 69.0
-margin_bottom = 50.0
+margin_left = 21.0
+margin_top = 20.0
+margin_right = 67.0
+margin_bottom = 53.0
 custom_fonts/font = SubResource( 1 )
 text = "-10"
 __meta__ = {
@@ -1137,13 +1139,13 @@ __meta__ = {
 }
 
 [node name="Pause" type="TextureButton" parent="Music_Menu/Controls"]
-margin_left = 172.0
-margin_right = 272.0
-margin_bottom = 73.0
+margin_left = 173.0
+margin_right = 273.0
+margin_bottom = 57.0
 rect_min_size = Vector2( 100, 0 )
 rect_pivot_offset = Vector2( -126.59, -80.8903 )
-texture_normal = ExtResource( 4 )
-texture_pressed = ExtResource( 5 )
+texture_normal = ExtResource( 37 )
+texture_pressed = ExtResource( 38 )
 expand = true
 script = ExtResource( 1 )
 __meta__ = {
@@ -1154,7 +1156,7 @@ __meta__ = {
 margin_left = 5.0
 margin_right = 94.0
 margin_bottom = 73.0
-rect_min_size = Vector2( 0, 73 )
+rect_min_size = Vector2( 0, 45.185 )
 rect_clip_content = true
 mouse_filter = 2
 __meta__ = {
@@ -1162,10 +1164,10 @@ __meta__ = {
 }
 
 [node name="Label" type="Label" parent="Music_Menu/Controls/Pause/CenterContainer"]
-margin_left = 5.0
-margin_top = 23.0
+margin_left = 6.0
+margin_top = 20.0
 margin_right = 83.0
-margin_bottom = 50.0
+margin_bottom = 53.0
 custom_fonts/font = SubResource( 1 )
 text = "Pause"
 __meta__ = {
@@ -1173,13 +1175,13 @@ __meta__ = {
 }
 
 [node name="Forward" type="TextureButton" parent="Music_Menu/Controls"]
-margin_left = 276.0
-margin_right = 376.0
-margin_bottom = 73.0
+margin_left = 277.0
+margin_right = 377.0
+margin_bottom = 57.0
 rect_min_size = Vector2( 100, 0 )
 rect_pivot_offset = Vector2( -126.59, -80.8903 )
-texture_normal = ExtResource( 4 )
-texture_pressed = ExtResource( 5 )
+texture_normal = ExtResource( 37 )
+texture_pressed = ExtResource( 38 )
 expand = true
 script = ExtResource( 1 )
 __meta__ = {
@@ -1190,7 +1192,7 @@ __meta__ = {
 margin_left = 5.0
 margin_right = 94.0
 margin_bottom = 73.0
-rect_min_size = Vector2( 0, 73 )
+rect_min_size = Vector2( 0, 45.185 )
 rect_clip_content = true
 mouse_filter = 2
 __meta__ = {
@@ -1199,9 +1201,9 @@ __meta__ = {
 
 [node name="Label" type="Label" parent="Music_Menu/Controls/Forward/CenterContainer"]
 margin_left = 17.0
-margin_top = 23.0
-margin_right = 71.0
-margin_bottom = 50.0
+margin_top = 20.0
+margin_right = 72.0
+margin_bottom = 53.0
 custom_fonts/font = SubResource( 1 )
 text = "+10"
 __meta__ = {
@@ -1620,7 +1622,8 @@ __meta__ = {
 }
 
 [node name="Home_Menu" type="Node2D" parent="."]
-position = Vector2( 110.253, 34.0091 )
+position = Vector2( 111.095, 34.0091 )
+scale = Vector2( 0.991065, 1 )
 
 [node name="Sprite" type="Sprite" parent="Home_Menu"]
 position = Vector2( 223.288, 156.025 )

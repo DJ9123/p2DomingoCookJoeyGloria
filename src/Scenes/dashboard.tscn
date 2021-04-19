@@ -24,5 +24,8 @@ __meta__ = {
 position = Vector2( 5.30023, 2.56497 )
 
 [node name="Center" parent="." instance=ExtResource( 1 )]
-position = Vector2( 915.812, -1.44836 )
-scale = Vector2( 1.5, 1.5 )
+margin_left = 870.252
+margin_top = -3.78401
+margin_right = 870.252
+margin_bottom = -3.78401
+rect_scale = Vector2( 1.57531, 1.57531 )
