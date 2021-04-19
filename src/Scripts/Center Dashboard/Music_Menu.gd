@@ -69,7 +69,7 @@ var songs = [
 	}, {
 		"filename": "sayonara-wild-heart.png",
 		"title": "Sayonara Wild Heart",
-		"artist": "Daniel Olsén",
+		"artist": "Daniel Olsen",
 		"album": "Sayonara Wild Hearts",
 		"lighter": "ae70ff",
 		"darker": "3173d3",
@@ -200,6 +200,7 @@ func _on_Forward_activated(_button):
 func _on_Music_activated(_button):
 	if not music_activated:
 		paused = false
+		pauseButton.text = "Pause"
 		music_activated = true
 
 

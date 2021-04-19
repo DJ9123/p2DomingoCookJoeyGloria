@@ -35,6 +35,10 @@ func _ready():
 	for knob in knobs.keys():
 		knobs[knob] = get_tree().get_root().find_node(knob,true,false)
 		knobs[knob].connect("rotation",self,"_on_knob_rotation")
+		
+#	Start playing music if the music screen is enabled first
+	if navButtons["Music"].visible:
+		$Music_Menu._on_Music_activated(null)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

@@ -90,9 +90,9 @@ __meta__ = {
 
 [node name="MPH_Label" type="Label" parent="Middle-Screen/CenterContainer"]
 margin_left = 9.0
-margin_top = 256.0
-margin_right = 506.0
-margin_bottom = 377.0
+margin_top = 243.0
+margin_right = 505.0
+margin_bottom = 390.0
 grow_horizontal = 2
 grow_vertical = 2
 custom_fonts/font = SubResource( 1 )

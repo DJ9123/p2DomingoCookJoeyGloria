@@ -59,11 +59,12 @@ size = 45
 font_data = ExtResource( 6 )
 
 [sub_resource type="DynamicFont" id=5]
-size = 14
+size = 18
+use_mipmaps = true
 font_data = ExtResource( 6 )
 
 [sub_resource type="DynamicFont" id=6]
-size = 32
+size = 38
 font_data = ExtResource( 6 )
 
 [sub_resource type="StyleBoxFlat" id=7]
@@ -296,6 +297,7 @@ __meta__ = {
 }
 
 [node name="CenterContainer" type="CenterContainer" parent="Previous"]
+visible = false
 margin_left = 3.0
 margin_top = 3.0
 margin_right = 48.0
@@ -333,6 +335,7 @@ __meta__ = {
 }
 
 [node name="CenterContainer" type="CenterContainer" parent="Next"]
+visible = false
 margin_left = 3.0
 margin_top = 3.0
 margin_right = 48.0
@@ -1010,8 +1013,9 @@ __meta__ = {
 }
 
 [node name="Music_Menu" type="Node2D" parent="."]
-position = Vector2( 110.563, 34.9774 )
-scale = Vector2( 1, 0.992235 )
+visible = false
+position = Vector2( 114.946, 34.9774 )
+scale = Vector2( 0.981, 0.992 )
 script = ExtResource( 20 )
 
 [node name="Lighter" type="ColorRect" parent="Music_Menu"]
@@ -1032,23 +1036,24 @@ __meta__ = {
 }
 
 [node name="Sprite" type="Sprite" parent="Music_Menu"]
-position = Vector2( 99.8371, 120.538 )
-scale = Vector2( 0.405066, 0.405066 )
+position = Vector2( 82.393, 120.79 )
+scale = Vector2( 0.364738, 0.364738 )
 texture = ExtResource( 21 )
 
 [node name="Info" type="VBoxContainer" parent="Music_Menu"]
-margin_left = 189.0
-margin_top = 42.0
-margin_right = 432.0
-margin_bottom = 202.0
+margin_left = 160.0
+margin_top = 20.0
+margin_right = 441.0
+margin_bottom = 215.0
 alignment = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Album" type="Label" parent="Music_Menu/Info"]
-margin_right = 243.0
-margin_bottom = 18.0
+margin_top = 22.0
+margin_right = 281.0
+margin_bottom = 45.0
 custom_fonts/font = SubResource( 5 )
 text = "This is the album"
 autowrap = true
@@ -1057,20 +1062,20 @@ __meta__ = {
 }
 
 [node name="Title" type="Label" parent="Music_Menu/Info"]
-margin_top = 22.0
-margin_right = 243.0
-margin_bottom = 148.0
+margin_top = 49.0
+margin_right = 281.0
+margin_bottom = 146.0
 custom_fonts/font = SubResource( 6 )
-text = "This is the name of the song"
+text = "Name of the song"
 autowrap = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Artist" type="Label" parent="Music_Menu/Info"]
-margin_top = 152.0
-margin_right = 243.0
-margin_bottom = 170.0
+margin_top = 150.0
+margin_right = 281.0
+margin_bottom = 173.0
 custom_fonts/font = SubResource( 5 )
 text = "This is the artist"
 autowrap = true
@@ -1103,8 +1108,8 @@ __meta__ = {
 }
 
 [node name="Rewind" type="TextureButton" parent="Music_Menu/Controls"]
-margin_left = 69.0
-margin_right = 169.0
+margin_left = 59.0
+margin_right = 159.0
 margin_bottom = 57.0
 rect_min_size = Vector2( 100, 0 )
 rect_pivot_offset = Vector2( -126.59, -80.8903 )
@@ -1139,10 +1144,10 @@ __meta__ = {
 }
 
 [node name="Pause" type="TextureButton" parent="Music_Menu/Controls"]
-margin_left = 173.0
-margin_right = 273.0
+margin_left = 163.0
+margin_right = 283.0
 margin_bottom = 57.0
-rect_min_size = Vector2( 100, 0 )
+rect_min_size = Vector2( 120, 0 )
 rect_pivot_offset = Vector2( -126.59, -80.8903 )
 texture_normal = ExtResource( 37 )
 texture_pressed = ExtResource( 38 )
@@ -1154,7 +1159,7 @@ __meta__ = {
 
 [node name="CenterContainer" type="CenterContainer" parent="Music_Menu/Controls/Pause"]
 margin_left = 5.0
-margin_right = 94.0
+margin_right = 113.0
 margin_bottom = 73.0
 rect_min_size = Vector2( 0, 45.185 )
 rect_clip_content = true
@@ -1164,9 +1169,9 @@ __meta__ = {
 }
 
 [node name="Label" type="Label" parent="Music_Menu/Controls/Pause/CenterContainer"]
-margin_left = 6.0
+margin_left = 15.0
 margin_top = 20.0
-margin_right = 83.0
+margin_right = 92.0
 margin_bottom = 53.0
 custom_fonts/font = SubResource( 1 )
 text = "Pause"
@@ -1175,8 +1180,8 @@ __meta__ = {
 }
 
 [node name="Forward" type="TextureButton" parent="Music_Menu/Controls"]
-margin_left = 277.0
-margin_right = 377.0
+margin_left = 287.0
+margin_right = 387.0
 margin_bottom = 57.0
 rect_min_size = Vector2( 100, 0 )
 rect_pivot_offset = Vector2( -126.59, -80.8903 )

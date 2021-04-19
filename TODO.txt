@@ -1,0 +1,34 @@
+Controls
+ ✔ Switch between scenes or toggle visibility
+
+
+Radio
+ ✔ am/fm button
+ ✔ saved radio station
+ ✔ Text switching on button press
+Music
+ ✔ display album
+ ✔ change color
+ ✔ change Text
+ ✔ music controls
+Phone
+ ✔ Display contacts
+ X Maybe call on click?
+Map
+ ✔ Display google map
+Settings
+ ✔ Bluetooth
+ ✔ Speakers
+ ✔ Clock
+ ✔ Info
+Home
+ - Display time/any active alerts
+
+
+Knobs
+ ✔ Style them based on type
+Font
+ ✔ Find font better for UI
+Icons
+ ✔ Change previous/next icons
+
