@@ -1,4 +1,4 @@
-[gd_scene load_steps=70 format=2]
+[gd_scene load_steps=72 format=2]
 
 [ext_resource path="res://Scripts/Center Dashboard/dash-button.gd" type="Script" id=1]
 [ext_resource path="res://Sprites/screen-border.png" type="Texture" id=2]
@@ -42,6 +42,7 @@
 [ext_resource path="res://StyleBox/blue_normal.tres" type="StyleBox" id=40]
 [ext_resource path="res://StyleBox/blue_hover.tres" type="StyleBox" id=41]
 [ext_resource path="res://StyleBox/blue_pressed.tres" type="StyleBox" id=42]
+[ext_resource path="res://Sprites/Center Dashboard/Home/home-blank.png" type="Texture" id=43]
 
 [sub_resource type="DynamicFont" id=1]
 size = 26
@@ -187,7 +188,11 @@ corner_radius_top_right = 6
 corner_radius_bottom_right = 6
 corner_radius_bottom_left = 6
 
-[sub_resource type="StyleBoxFlat" id=27]
+[sub_resource type="DynamicFont" id=27]
+size = 60
+font_data = ExtResource( 6 )
+
+[sub_resource type="StyleBoxFlat" id=28]
 bg_color = Color( 0.443137, 0.14902, 0.14902, 0 )
 border_width_left = 5
 border_width_top = 5
@@ -1630,9 +1635,164 @@ __meta__ = {
 position = Vector2( 111.095, 34.0091 )
 scale = Vector2( 0.991065, 1 )
 
-[node name="Sprite" type="Sprite" parent="Home_Menu"]
+[node name="Clock" type="Sprite" parent="Home_Menu"]
 position = Vector2( 223.288, 156.025 )
 texture = ExtResource( 26 )
+
+[node name="TimeContainer2" type="CenterContainer" parent="Home_Menu/Clock"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -446.788
+margin_top = -135.025
+margin_right = 4.21201
+margin_bottom = 137.975
+mouse_filter = 2
+script = ExtResource( 18 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Time" type="Label" parent="Home_Menu/Clock/TimeContainer2"]
+margin_left = 136.0
+margin_top = 99.0
+margin_right = 315.0
+margin_bottom = 173.0
+custom_fonts/font = SubResource( 27 )
+text = "00:00"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Blank" type="Sprite" parent="Home_Menu"]
+visible = false
+position = Vector2( 223.288, 156.025 )
+texture = ExtResource( 43 )
+
+[node name="Settings_Menu2" type="Node2D" parent="Home_Menu/Blank"]
+position = Vector2( -225.993, -149.526 )
+scale = Vector2( 1.00902, 1 )
+
+[node name="Sprite" type="Sprite" parent="Home_Menu/Blank/Settings_Menu2"]
+visible = false
+position = Vector2( 223.288, 156.025 )
+texture = ExtResource( 24 )
+
+[node name="Label" type="Label" parent="Home_Menu/Blank/Settings_Menu2"]
+margin_left = 200.213
+margin_top = 33.5183
+margin_right = 251.213
+margin_bottom = 47.5183
+text = "Alert!"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Control" type="Control" parent="Home_Menu/Blank/Settings_Menu2"]
+margin_left = 6.0
+margin_top = 50.0
+margin_right = 443.0
+margin_bottom = 289.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Home_Menu/Blank/Settings_Menu2/Control"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -199.5
+margin_top = -109.5
+margin_right = 200.5
+margin_bottom = 119.5
+custom_constants/separation = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="tire-pressure-notification" type="Button" parent="Home_Menu/Blank/Settings_Menu2/Control/VBoxContainer"]
+margin_right = 400.0
+margin_bottom = 45.0
+rect_min_size = Vector2( 400, 45 )
+custom_styles/hover = ExtResource( 41 )
+custom_styles/pressed = ExtResource( 42 )
+custom_styles/normal = ExtResource( 40 )
+
+[node name="Label" type="Label" parent="Home_Menu/Blank/Settings_Menu2/Control/VBoxContainer/tire-pressure-notification"]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_left = 7.0
+margin_top = -7.0
+margin_right = 70.0
+margin_bottom = 7.0
+text = "Tire pressure is low!"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="low-fuel-notification" type="Button" parent="Home_Menu/Blank/Settings_Menu2/Control/VBoxContainer"]
+margin_top = 46.0
+margin_right = 400.0
+margin_bottom = 91.0
+rect_min_size = Vector2( 400, 45 )
+custom_styles/hover = ExtResource( 41 )
+custom_styles/pressed = ExtResource( 42 )
+custom_styles/normal = ExtResource( 40 )
+
+[node name="Label" type="Label" parent="Home_Menu/Blank/Settings_Menu2/Control/VBoxContainer/low-fuel-notification"]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_left = 7.0
+margin_top = -7.0
+margin_right = 70.0
+margin_bottom = 7.0
+text = "Your fuel is low! Get fuel soon!"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="engine-temp-notification" type="Button" parent="Home_Menu/Blank/Settings_Menu2/Control/VBoxContainer"]
+margin_top = 92.0
+margin_right = 400.0
+margin_bottom = 137.0
+rect_min_size = Vector2( 400, 45 )
+custom_styles/hover = ExtResource( 41 )
+custom_styles/pressed = ExtResource( 42 )
+custom_styles/normal = ExtResource( 40 )
+
+[node name="Label" type="Label" parent="Home_Menu/Blank/Settings_Menu2/Control/VBoxContainer/engine-temp-notification"]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_left = 7.0
+margin_top = -7.0
+margin_right = 70.0
+margin_bottom = 7.0
+text = "Engine temperature too high!"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="icy-road-notification" type="Button" parent="Home_Menu/Blank/Settings_Menu2/Control/VBoxContainer"]
+margin_top = 138.0
+margin_right = 400.0
+margin_bottom = 183.0
+rect_min_size = Vector2( 400, 45 )
+custom_styles/hover = ExtResource( 41 )
+custom_styles/pressed = ExtResource( 42 )
+custom_styles/normal = ExtResource( 40 )
+
+[node name="Label" type="Label" parent="Home_Menu/Blank/Settings_Menu2/Control/VBoxContainer/icy-road-notification"]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_left = 7.0
+margin_top = -7.0
+margin_right = 70.0
+margin_bottom = 7.0
+text = "Roads are icy! Watch for other drivers!"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Time" type="Node2D" parent="."]
 position = Vector2( 110.25, 33.9923 )
@@ -1662,7 +1822,7 @@ margin_left = -0.0787354
 margin_right = 446.921
 margin_bottom = 293.0
 mouse_filter = 2
-custom_styles/panel = SubResource( 27 )
+custom_styles/panel = SubResource( 28 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -1689,17 +1849,17 @@ text = "00:00"
 __meta__ = {
 "_edit_use_anchors_": false
 }
-[connection signal="activated" from="Radio" to="Radio_Menu" method="_on_Radio_activated"]
 [connection signal="activated" from="Radio" to="Music_Menu" method="_on_Radio_activated"]
+[connection signal="activated" from="Radio" to="Radio_Menu" method="_on_Radio_activated"]
 [connection signal="pressed" from="Radio" to="Radio" method="_on_Button_pressed"]
-[connection signal="activated" from="Music" to="Radio_Menu" method="_on_Music_activated"]
 [connection signal="activated" from="Music" to="Music_Menu" method="_on_Music_activated"]
+[connection signal="activated" from="Music" to="Radio_Menu" method="_on_Music_activated"]
 [connection signal="pressed" from="Music" to="Music" method="_on_Button_pressed"]
-[connection signal="activated" from="Previous" to="Radio_Menu" method="_on_Previous_activated"]
 [connection signal="activated" from="Previous" to="Music_Menu" method="_on_Previous_activated"]
+[connection signal="activated" from="Previous" to="Radio_Menu" method="_on_Previous_activated"]
 [connection signal="pressed" from="Previous" to="Previous" method="_on_Button_pressed"]
-[connection signal="activated" from="Next" to="Radio_Menu" method="_on_Next_activated"]
 [connection signal="activated" from="Next" to="Music_Menu" method="_on_Next_activated"]
+[connection signal="activated" from="Next" to="Radio_Menu" method="_on_Next_activated"]
 [connection signal="pressed" from="Next" to="Next" method="_on_Button_pressed"]
 [connection signal="pressed" from="Phone" to="Phone" method="_on_Button_pressed"]
 [connection signal="pressed" from="Map" to="Map" method="_on_Button_pressed"]

@@ -10,6 +10,13 @@ extends Node2D
 func _ready():
 	$Center.connect("emergency", self, "_on_emergency_pressed")
 	$Main/Control/Accelerate.connect("speed", self, "_a")
+#	signal tire_pressure_toggled
+#	signal temperature_toggled
+#	signal all_alerts_toggled
+	$Main/Icons.connect("tire_pressure_toggled", $Center, "_alert_icon_changed")
+	$Main/Icons.connect("temperature_toggled", $Center, "_alert_icon_changed")
+	$Main/Icons.connect("all_alerts_toggled", $Center, "_alert_icon_changed")
+
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):

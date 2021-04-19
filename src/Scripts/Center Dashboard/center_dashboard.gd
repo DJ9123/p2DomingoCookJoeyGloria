@@ -60,6 +60,29 @@ func _on_knob_rotation(knob, rot):
 
 func _on_Warning_activated(button):
 	emit_signal("emergency", button)
-	
+
+
 func _a():
 	print('too fast! from the center screen')
+
+
+func _alert_icon_changed(children):
+	for alert_icon in $Home_Menu/Blank/Settings_Menu2/Control/VBoxContainer.get_children():
+		alert_icon.visible = false
+	var visible = []
+	for child in children:
+		if child.visible:
+			visible.append(child)
+			
+	if visible.size() > 0:
+		$Home_Menu.visible = true
+		$Home_Menu/Blank.visible = true
+		for vis in visible:
+			var alert_icon_change = get_tree().get_root().find_node(vis.name + "-notification",true,false)
+			if (alert_icon_change):
+				alert_icon_change.visible = true
+			
+	else:
+		$Home_Menu/Blank.visible = false
+			
+		
