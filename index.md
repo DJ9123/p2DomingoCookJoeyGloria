@@ -69,10 +69,15 @@
 ![Example image 5 for car design](/assets/car5.png)
 
 #### Pros:
--
+- MPG is always visible on main screen
+- Many physical buttons for most commonly used features
+- Only important apps are displayed on screen
 
 #### Cons:
--
+- Gas and temperature meters are not ideal
+  - Both meters are oddly positioned
+  - Gas is not easily readable in this shape, should be moved to bar chart
+- There are several unused/unimportant buttons on center dashboard
 
 
 ### Most common features

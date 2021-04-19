@@ -194,9 +194,6 @@ border_color = Color( 0.278431, 0.384314, 1, 1 )
 [node name="Center" type="Node2D"]
 position = Vector2( 0, -1 )
 script = ExtResource( 3 )
-__meta__ = {
-"_edit_vertical_guides_": [  ]
-}
 
 [node name="Background" type="Sprite" parent="."]
 position = Vector2( 334.905, 342.698 )
@@ -793,6 +790,7 @@ __meta__ = {
 }
 
 [node name="Radio_Menu" type="Node2D" parent="."]
+visible = false
 position = Vector2( 333.499, 180.433 )
 script = ExtResource( 19 )
 
@@ -801,9 +799,9 @@ scale = Vector2( 0.558141, 0.48813 )
 texture = ExtResource( 2 )
 
 [node name="Preset1" type="TextureButton" parent="Radio_Menu"]
-margin_left = -184.129
+margin_left = -75.129
 margin_top = -106.467
-margin_right = -89.1295
+margin_right = 19.8705
 margin_bottom = -43.4675
 rect_scale = Vector2( 0.75, 0.75 )
 rect_pivot_offset = Vector2( -126.59, -80.8903 )
@@ -838,10 +836,10 @@ __meta__ = {
 }
 
 [node name="Preset2" type="TextureButton" parent="Radio_Menu"]
-margin_left = -183.859
-margin_top = -59.8334
-margin_right = -88.8596
-margin_bottom = 3.16637
+margin_left = -4.58606
+margin_top = -106.726
+margin_right = 90.4133
+margin_bottom = -43.7262
 rect_scale = Vector2( 0.75, 0.75 )
 rect_pivot_offset = Vector2( -126.59, -80.8903 )
 texture_normal = ExtResource( 29 )
@@ -875,10 +873,10 @@ __meta__ = {
 }
 
 [node name="Preset3" type="TextureButton" parent="Radio_Menu"]
-margin_left = -183.935
-margin_top = -12.282
-margin_right = -88.9356
-margin_bottom = 50.7178
+margin_left = 66.6586
+margin_top = -106.84
+margin_right = 161.658
+margin_bottom = -43.8398
 rect_scale = Vector2( 0.75, 0.75 )
 rect_pivot_offset = Vector2( -126.59, -80.8903 )
 texture_normal = ExtResource( 29 )
@@ -912,11 +910,10 @@ __meta__ = {
 }
 
 [node name="AM" type="TextureButton" parent="Radio_Menu"]
-margin_left = -42.505
-margin_top = 112.781
-margin_right = 52.4946
-margin_bottom = 175.781
-rect_scale = Vector2( 0.75, 0.75 )
+margin_left = -94.2214
+margin_top = 76.7807
+margin_right = 0.778229
+margin_bottom = 139.781
 rect_pivot_offset = Vector2( -126.59, -80.8903 )
 texture_normal = ExtResource( 37 )
 texture_pressed = ExtResource( 38 )
@@ -949,11 +946,10 @@ __meta__ = {
 }
 
 [node name="FM" type="TextureButton" parent="Radio_Menu"]
-margin_left = 28.959
-margin_top = 112.938
-margin_right = 123.959
-margin_bottom = 175.938
-rect_scale = Vector2( 0.75, 0.75 )
+margin_left = 0.55806
+margin_top = 76.9786
+margin_right = 95.5581
+margin_bottom = 139.979
 rect_pivot_offset = Vector2( -126.59, -80.8903 )
 texture_normal = ExtResource( 37 )
 texture_pressed = ExtResource( 38 )
@@ -1504,7 +1500,6 @@ position = Vector2( 223.288, 156.025 )
 texture = ExtResource( 24 )
 
 [node name="Home_Menu" type="Node2D" parent="."]
-visible = false
 position = Vector2( 110.253, 34.0091 )
 
 [node name="Sprite" type="Sprite" parent="Home_Menu"]
@@ -1535,7 +1530,8 @@ __meta__ = {
 }
 
 [node name="Panel" type="Panel" parent="Time"]
-margin_right = 447.0
+margin_left = -0.0787354
+margin_right = 446.921
 margin_bottom = 293.0
 mouse_filter = 2
 custom_styles/panel = SubResource( 27 )
