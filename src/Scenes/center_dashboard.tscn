@@ -1423,6 +1423,20 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="Label" type="Label" parent="Phone_Menu/Control"]
+margin_left = 15.1875
+margin_top = 53.546
+margin_right = 59.1875
+margin_bottom = 67.546
+text = "Recent"
+
+[node name="Label2" type="Label" parent="Phone_Menu/Control"]
+margin_left = 12.4583
+margin_top = 114.115
+margin_right = 60.4583
+margin_bottom = 128.115
+text = "Contact"
+
 [node name="Sprite" type="Sprite" parent="Phone_Menu"]
 visible = false
 texture = ExtResource( 23 )
@@ -1474,6 +1488,17 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="Label" type="Label" parent="Map_Menu/bg_panel/Option_One"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -65.5
+margin_top = -15.5
+margin_right = 65.5
+margin_bottom = 15.5
+text = "Home - 17mi - 7min"
+
 [node name="Option_Two" type="Button" parent="Map_Menu/bg_panel"]
 anchor_left = 0.5
 anchor_top = 1.0
@@ -1485,6 +1510,20 @@ margin_right = 101.0
 mouse_filter = 1
 custom_styles/hover = SubResource( 24 )
 custom_styles/normal = SubResource( 25 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="Map_Menu/bg_panel/Option_Two"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -85.0
+margin_top = -15.5
+margin_right = 85.0
+margin_bottom = 15.5
+text = "Texas Tech - 30mi - 14min"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -1890,17 +1929,17 @@ text = "00:00"
 __meta__ = {
 "_edit_use_anchors_": false
 }
-[connection signal="activated" from="Radio" to="Radio_Menu" method="_on_Radio_activated"]
 [connection signal="activated" from="Radio" to="Music_Menu" method="_on_Radio_activated"]
+[connection signal="activated" from="Radio" to="Radio_Menu" method="_on_Radio_activated"]
 [connection signal="pressed" from="Radio" to="Radio" method="_on_Button_pressed"]
-[connection signal="activated" from="Music" to="Radio_Menu" method="_on_Music_activated"]
 [connection signal="activated" from="Music" to="Music_Menu" method="_on_Music_activated"]
+[connection signal="activated" from="Music" to="Radio_Menu" method="_on_Music_activated"]
 [connection signal="pressed" from="Music" to="Music" method="_on_Button_pressed"]
-[connection signal="activated" from="Previous" to="Radio_Menu" method="_on_Previous_activated"]
 [connection signal="activated" from="Previous" to="Music_Menu" method="_on_Previous_activated"]
+[connection signal="activated" from="Previous" to="Radio_Menu" method="_on_Previous_activated"]
 [connection signal="pressed" from="Previous" to="Previous" method="_on_Button_pressed"]
-[connection signal="activated" from="Next" to="Radio_Menu" method="_on_Next_activated"]
 [connection signal="activated" from="Next" to="Music_Menu" method="_on_Next_activated"]
+[connection signal="activated" from="Next" to="Radio_Menu" method="_on_Next_activated"]
 [connection signal="pressed" from="Next" to="Next" method="_on_Button_pressed"]
 [connection signal="pressed" from="Phone" to="Phone" method="_on_Button_pressed"]
 [connection signal="pressed" from="Map" to="Map" method="_on_Button_pressed"]

@@ -23,15 +23,15 @@
 size = 120
 font_data = ExtResource( 5 )
 
-[sub_resource type="DynamicFont" id=7]
+[sub_resource type="DynamicFont" id=2]
 size = 45
 font_data = ExtResource( 5 )
 
-[sub_resource type="DynamicFont" id=2]
+[sub_resource type="DynamicFont" id=3]
 size = 55
 font_data = ExtResource( 5 )
 
-[sub_resource type="StyleBoxFlat" id=3]
+[sub_resource type="StyleBoxFlat" id=4]
 bg_color = Color( 0.6, 0.6, 0.6, 0 )
 border_width_left = 5
 border_width_top = 5
@@ -43,15 +43,15 @@ corner_radius_top_right = 5
 corner_radius_bottom_right = 5
 corner_radius_bottom_left = 5
 
-[sub_resource type="DynamicFont" id=4]
+[sub_resource type="DynamicFont" id=5]
 size = 88
 font_data = ExtResource( 5 )
 
-[sub_resource type="DynamicFont" id=5]
+[sub_resource type="DynamicFont" id=6]
 size = 25
 font_data = ExtResource( 5 )
 
-[sub_resource type="DynamicFont" id=6]
+[sub_resource type="DynamicFont" id=7]
 size = 26
 font_data = ExtResource( 5 )
 
@@ -130,7 +130,7 @@ margin_left = -116.995
 margin_top = -634.0
 margin_right = -8.99524
 margin_bottom = -578.0
-custom_fonts/font = SubResource( 7 )
+custom_fonts/font = SubResource( 2 )
 text = "40°F"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -146,7 +146,7 @@ margin_left = -495.612
 margin_top = -659.983
 margin_right = -15.6122
 margin_bottom = -591.983
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 3 )
 text = "Please slow down"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -157,7 +157,7 @@ margin_left = -250.0
 margin_top = -311.0
 margin_right = -150.0
 margin_bottom = -211.0
-custom_styles/panel = SubResource( 3 )
+custom_styles/panel = SubResource( 4 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -171,7 +171,7 @@ margin_left = -34.0
 margin_top = -54.0
 margin_right = 34.0
 margin_bottom = 54.0
-custom_fonts/font = SubResource( 4 )
+custom_fonts/font = SubResource( 5 )
 text = "D"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -206,7 +206,7 @@ margin_left = -117.253
 margin_top = 499.553
 margin_right = -101.253
 margin_bottom = 531.553
-custom_fonts/font = SubResource( 5 )
+custom_fonts/font = SubResource( 6 )
 text = "E"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -217,7 +217,7 @@ margin_left = -112.975
 margin_top = 549.939
 margin_right = -96.9752
 margin_bottom = 581.939
-custom_fonts/font = SubResource( 5 )
+custom_fonts/font = SubResource( 6 )
 text = "-"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -228,7 +228,7 @@ margin_left = 311.027
 margin_top = 498.016
 margin_right = 326.027
 margin_bottom = 531.016
-custom_fonts/font = SubResource( 6 )
+custom_fonts/font = SubResource( 7 )
 text = "F"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -239,7 +239,7 @@ margin_left = 309.126
 margin_top = 548.877
 margin_right = 330.126
 margin_bottom = 581.877
-custom_fonts/font = SubResource( 6 )
+custom_fonts/font = SubResource( 7 )
 text = "+"
 __meta__ = {
 "_edit_use_anchors_": false
