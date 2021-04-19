@@ -13,7 +13,7 @@
 [ext_resource path="res://Sprites/alert-icons/low-fuel.png" type="Texture" id=11]
 [ext_resource path="res://Sprites/alert-icons/low-beam.png" type="Texture" id=12]
 [ext_resource path="res://Scripts/Main Dashboard/Alerts.gd" type="Script" id=13]
-[ext_resource path="res://Sprites/Center Dashboard/placeholderrpm.png" type="Texture" id=14]
+[ext_resource path="res://Sprites/Center Dashboard/rpmfinal.png" type="Texture" id=14]
 [ext_resource path="res://Sprites/Center Dashboard/temp.png" type="Texture" id=15]
 
 [sub_resource type="DynamicFont" id=1]
