@@ -10,6 +10,8 @@ onready var leftarrow = $"../Left Arrow"
 
 onready var rightarrow = $"../Left Arrow"
 
+var red = load("res://Sprites/Center Dashboard/bar_red.png") 
+var green = load("res://Sprites/Center Dashboard/bar_green.png") 
 
 # Represents if the arrows are blinking
 var left = false
@@ -47,7 +49,7 @@ func _process(delta):
 #		$"../Left Arrow".visible = true
 
 func _on_speed():
-	$"../Middle-Screen/CenterContainer".rect_size.y = 300
+	$"../Middle-Screen/CenterContainer".rect_size.y = 340
 	$"../Middle-Screen/Speed Warning".visible = true
 	
 func _on_normal():
@@ -55,10 +57,14 @@ func _on_normal():
 	$"../Middle-Screen/Speed Warning".visible = false
 
 func _on_Reduce_Gas_pressed():
+	if(healthbar.value <= 20):
+		healthbar.texture_progress = red
 	healthbar.value -= 10
 
 
 func _on_Add_Gas_pressed():
+	if(healthbar.value == 20):
+		healthbar.texture_progress = green
 	healthbar.value += 10
 
 

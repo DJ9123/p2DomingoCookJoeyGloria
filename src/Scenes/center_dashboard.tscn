@@ -1,4 +1,4 @@
-[gd_scene load_steps=72 format=2]
+[gd_scene load_steps=73 format=2]
 
 [ext_resource path="res://Scripts/Center Dashboard/dash-button.gd" type="Script" id=1]
 [ext_resource path="res://Sprites/screen-border.png" type="Texture" id=2]
@@ -43,6 +43,7 @@
 [ext_resource path="res://StyleBox/blue_hover.tres" type="StyleBox" id=41]
 [ext_resource path="res://StyleBox/blue_pressed.tres" type="StyleBox" id=42]
 [ext_resource path="res://Sprites/Center Dashboard/Home/home-blank.png" type="Texture" id=43]
+[ext_resource path="res://Fonts/phone.tres" type="DynamicFont" id=44]
 
 [sub_resource type="DynamicFont" id=1]
 size = 26
@@ -1246,9 +1247,8 @@ __meta__ = {
 [node name="Label" type="Label" parent="Phone_Menu/Control/Panel"]
 anchor_left = 0.5
 anchor_right = 0.5
-margin_left = -28.0
-margin_top = 6.0
-margin_right = 100.0
+margin_left = -44.896
+margin_right = 83.104
 margin_bottom = 35.0
 custom_fonts/font = SubResource( 9 )
 text = "Recents"
@@ -1283,18 +1283,30 @@ __meta__ = {
 }
 
 [node name="Label" type="Label" parent="Phone_Menu/Control/Panel/Content/One"]
-margin_right = 40.0
-margin_bottom = 14.0
-text = "Mom
-Missed call
-7:06pm"
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_left = 36.2366
+margin_top = -14.0409
+margin_right = 336.237
+margin_bottom = 13.9591
+custom_fonts/font = ExtResource( 44 )
+text = "Mom                   7:03pm"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Contacts" type="Label" parent="Phone_Menu/Control/Panel/Content/One"]
 visible = false
-margin_right = 40.0
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -163.5
+margin_top = -14.0
+margin_right = 163.5
 margin_bottom = 14.0
-text = "Mom
-555-555-555"
+custom_fonts/font = ExtResource( 43 )
+text = "Mom                555-555-555"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -1316,18 +1328,32 @@ __meta__ = {
 }
 
 [node name="Label" type="Label" parent="Phone_Menu/Control/Panel/Content/Two"]
-margin_right = 40.0
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -129.263
+margin_top = -14.0
+margin_right = 170.737
 margin_bottom = 14.0
-text = "Mom
-Missed call
-7:04pm"
+custom_fonts/font = ExtResource( 43 )
+text = "Mom                   7:03pm"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Contacts" type="Label" parent="Phone_Menu/Control/Panel/Content/Two"]
 visible = false
-margin_right = 40.0
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -163.5
+margin_top = -14.0
+margin_right = 163.5
 margin_bottom = 14.0
-text = "Dad
-555-555-555"
+custom_fonts/font = ExtResource( 43 )
+text = "Dad                555-555-555"
 
 [node name="Three" type="Button" parent="Phone_Menu/Control/Panel/Content"]
 anchor_left = 0.5
@@ -1346,18 +1372,32 @@ __meta__ = {
 }
 
 [node name="Label" type="Label" parent="Phone_Menu/Control/Panel/Content/Three"]
-margin_right = 40.0
-margin_bottom = 14.0
-text = "Mom
-Missed call
-7:03pm"
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -129.263
+margin_top = -13.9899
+margin_right = 170.737
+margin_bottom = 14.0101
+custom_fonts/font = ExtResource( 43 )
+text = "Mom                   7:03pm"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Contacts" type="Label" parent="Phone_Menu/Control/Panel/Content/Three"]
 visible = false
-margin_right = 40.0
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -163.5
+margin_top = -14.0
+margin_right = 163.5
 margin_bottom = 14.0
-text = "Dog
-555-555-555"
+custom_fonts/font = ExtResource( 43 )
+text = "Dog                555-555-555"
 
 [node name="Recents" type="Button" parent="Phone_Menu/Control/Panel"]
 margin_left = 17.4309
@@ -1388,11 +1428,11 @@ visible = false
 texture = ExtResource( 23 )
 
 [node name="Map_Menu" type="Node2D" parent="."]
-visible = false
 position = Vector2( 110.253, 34.0091 )
 script = ExtResource( 28 )
 
 [node name="Panel" type="Panel" parent="Map_Menu"]
+visible = false
 margin_top = 20.0
 margin_right = 447.0
 margin_bottom = 292.0
@@ -1402,12 +1442,11 @@ __meta__ = {
 }
 
 [node name="Sprite" type="Sprite" parent="Map_Menu"]
-visible = false
-position = Vector2( 223.819, 155.994 )
+position = Vector2( 221.978, 155.994 )
+scale = Vector2( 0.991765, 1 )
 texture = ExtResource( 25 )
 
 [node name="bg_panel" type="Panel" parent="Map_Menu"]
-visible = false
 margin_left = 12.7189
 margin_top = 25.0353
 margin_right = 214.719
@@ -1474,6 +1513,7 @@ __meta__ = {
 }
 
 [node name="collapsed" type="Panel" parent="Map_Menu"]
+visible = false
 margin_left = 13.0
 margin_top = 25.0
 margin_right = 215.0
@@ -1632,6 +1672,7 @@ __meta__ = {
 }
 
 [node name="Home_Menu" type="Node2D" parent="."]
+visible = false
 position = Vector2( 111.095, 34.0091 )
 scale = Vector2( 0.991065, 1 )
 
